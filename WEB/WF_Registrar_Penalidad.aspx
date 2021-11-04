@@ -50,7 +50,7 @@
             var strData = strKey.value.toLowerCase().split(" ");
             var tblData = document.getElementById("<%=gv_Tabla_Lista_Registrar_Penalidad.ClientID %>");
             var rowData;
-            for (var i = 1; i < tblData.rows.length; i++) {
+            for (var i = 1; i <= tblData.rows.length; i++) {
                 rowData = tblData.rows[i].innerHTML;
                 var styleDisplay = 'none';
                 for (var j = 0; j < strData.length; j++) {
