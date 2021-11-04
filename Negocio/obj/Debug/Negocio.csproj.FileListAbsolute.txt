@@ -95,3 +95,14 @@ D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.cspr
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.dll
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.pdb
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.dll
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.pdb
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
+H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb

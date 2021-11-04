@@ -77,7 +77,7 @@
 					    <p><button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button><h3>¿Necesitas Ayuda?</h3>
     </p>
 					    <div class='line-wh'></div>
-    					<button onclick="" class='b-support' title='Forgot Passwor?'> Olvidaste tu Contraseña</button>
+    					<button  class='b-support' title='Forgot Passwor?'> <a style="color:#032942" href="WF_Olvidar_Contraseña.aspx"> Olvidaste tu Contraseña</a></button>
     <button onclick="" class='b-support' title='Contact Support'> Contactate con Soporte</button>
     					<div class='line-wh'></div>
     <%--<button onclick="" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>--%>

@@ -28,5 +28,10 @@ namespace Negocio
         {
             objusu.buscarUsuarioDni(ojb);
         }
+
+        public void actualizarContraseña(Usuario ojb)
+        {
+            objusu.actualizarContraseña(ojb);
+        }
     }
 }
