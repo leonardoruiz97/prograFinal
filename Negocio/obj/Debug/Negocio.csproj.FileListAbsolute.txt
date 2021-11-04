@@ -1,0 +1,97 @@
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\visual code\pantillas\base 2 TP\SGIGP\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\visual code\TP Proyecto programacion\SGOGP\Negocio\obj\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.dll
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.pdb
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2020-2\TP4\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\SegundoEntregable\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.dll
+D:\UNIVERSIDAD\Universidad-2021-1\TI1\PROYECTO-TP\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\SISTEMA COOPERATIVA\SWGISC\SWGISC\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Documents\URP\9 CICLO\TIA\INTEGRADO v1.4\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.dll
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.pdb
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.dll
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.dll
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.pdb
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
+D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
