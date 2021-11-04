@@ -49,7 +49,6 @@ D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.dll
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.pdb
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\bin\Debug\Dominio.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\bin\Debug\Dominio.pdb
-H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.pdb
