@@ -93,8 +93,8 @@
     </script>
 
 
-    <div class="field" id="searchform">
-        <asp:TextBox Text="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" OnTextChanged="txtFillter_TextChanged" />
+  <div class="field" id="searchform">
+        <asp:TextBox placeholder="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" OnTextChanged="txtFillter_TextChanged" />
         <button type="button" id="search">Buscar</button>
     </div>
     <div style="margin-left:50px">
