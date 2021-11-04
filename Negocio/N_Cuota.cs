@@ -18,5 +18,11 @@ namespace Negocio
         {
             return objCuota.registrarCuota(cu);
         }
+
+
+        public DataTable ListarCuotaMoroso(Cuota cu)
+        {
+            return objCuota.listarCuotaMoroso(cu);
+        }
     }
 }

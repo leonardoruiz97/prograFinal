@@ -213,6 +213,17 @@
                             
                             </ul>
                         </li>
+                         <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Penalidad</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="WF_Registrar_Penalidad.aspx"><i class="fa fa-eye">Registrar Penalidad</i></a></li>
+                               
+                            
+                            </ul>
+                        </li>
 
 
 

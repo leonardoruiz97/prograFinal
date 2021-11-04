@@ -38,5 +38,30 @@ namespace GestionDatos
             sqlc.Close();
             return 1;
         }
+
+
+        public DataTable listarCuotaMoroso(Cuota objcuota)
+        {
+            try
+            {
+                sqlc.Open();
+
+                cmd = new SqlCommand("sp_CuotasMorosa", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@FK_IECU_Cod", objcuota.FK_IECU_Cod);
+
+
+
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
