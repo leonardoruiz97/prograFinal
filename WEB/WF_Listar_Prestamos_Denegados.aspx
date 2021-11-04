@@ -43,13 +43,32 @@
      <section style="padding: 50px;"></section>
         <h3 style="text-align: center; color:black"><b>LISTA DE PRESTAMOS DENEGADOS</b></h3>
 
+  <script type="text/javascript">
+      function Search_Gridview(strKey) {
+          var strData = strKey.value.toLowerCase().split(" ");
+          var tblData = document.getElementById("<%=gv_Tabla_Lista_Prestamo_Denegados.ClientID %>");
+          var rowData;
+          for (var i = 1; i < tblData.rows.length; i++) {
+              rowData = tblData.rows[i].innerHTML;
+              var styleDisplay = 'none';
+              for (var j = 0; j < strData.length; j++) {
+                  if (rowData.toLowerCase().indexOf(strData[j]) >= 0)
+                      styleDisplay = '';
+                  else {
+                      styleDisplay = 'none';
+                      break;
+                  }
+              }
+              tblData.rows[i].style.display = styleDisplay;
+          }
+      }
+  </script>
 
 
-
-<%--    <div class="field" id="searchform">
-        <input type="text" id="searchterm" placeholder="Ingresar elemento a buscar" />
+  <div class="field" id="searchform">
+        <asp:TextBox placeholder="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" />
         <button type="button" id="search">Buscar</button>
-    </div>--%>
+    </div>
 
     <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
