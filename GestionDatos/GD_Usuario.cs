@@ -131,6 +131,24 @@ namespace GestionDatos
         }
 
 
+        public void actualizarContraseña(Usuario objusu)
+        {
+            cmd = new SqlCommand("sp_actualizarContraseña", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@VU_Contraseña ", objusu.VU_Contraseña);
+            cmd.Parameters.AddWithValue("@IU_Dni ", objusu.IU_Dni);
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            sqlc.Close();
+
+
+
+
+
+
+        }
+
+
 
 
 
