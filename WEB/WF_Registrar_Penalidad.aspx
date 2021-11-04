@@ -19,32 +19,32 @@
             </asp:BoundField>
 
 
-            <asp:BoundField DataField="VS_Nombre_Completo" HeaderText="Fecha Fin" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+            <asp:BoundField DataField="DC_FechaFin" HeaderText="Fecha Fin" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
 
-             <asp:BoundField DataField="VS_Nombre_Completo" HeaderText="Numero Cuota" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+             <asp:BoundField DataField="IC_NumeroCuota" HeaderText="Numero Cuota" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
 
 
-             <asp:BoundField DataField="VS_Nombre_Completo" HeaderText="Importe" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+             <asp:BoundField DataField="FC_MontoCuota" HeaderText="Importe" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
 
-             <asp:BoundField DataField="VS_Nombre_Completo" HeaderText="Dias de Retraso" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+             <asp:BoundField DataField="DiasRetraso" HeaderText="Dias de Retraso" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
 
-            <asp:BoundField DataField="VS_Nombre_Completo" HeaderText="Estado del Prestamo" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+            <asp:BoundField DataField="VEcu_Estado_Cuota" HeaderText="Estado del Prestamo" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
