@@ -38,7 +38,7 @@
             <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
 
-             <asp:BoundField DataField="DiasRetraso" HeaderText="Dias de Retraso" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+             <asp:BoundField DataField="DiasRetraso" HeaderText="Dias Retraso" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
             <ItemStyle CssClass="text-center"></ItemStyle>
