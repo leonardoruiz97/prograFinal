@@ -41,97 +41,186 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!--main content start-->
+        <h3 style="text-align: center; color: black"><b>REGISTRAR PENALIDAD</b></h3>
+    <!-- /row -->
+    <!-- FORM VALIDATION -->
+    <div class="row mt" style="margin-left:100px">
+         <div class="col-lg-11">
+            <h4><i class="fa fa-angle-right"></i>DATOS DEL PRESTAMO</h4>
+            <div class="form-panel">
+                <div class=" form">
+                    <form1 class="cmxform form-horizontal style-form" id="commentForm" method="get" action="">
+                        <section style="padding-top: 25px"></section>
 
-    <section style="padding: 50px;"></section>
-    <h3 style="text-align: center; color: black"><b>LISTA DE REGISTRO PENALIDAD</b></h3>
 
-    <script type="text/javascript">
-        function Search_Gridview(strKey) {
-            var strData = strKey.value.toLowerCase().split(" ");
-            var tblData = document.getElementById("<%=gv_Tabla_Lista_Registrar_Penalidad.ClientID %>");
-            var rowData;
-            for (var i = 1; i <= tblData.rows.length; i++) {
-                rowData = tblData.rows[i].innerHTML;
-                var styleDisplay = 'none';
-                for (var j = 0; j < strData.length; j++) {
-                    if (rowData.toLowerCase().indexOf(strData[j]) >= 0)
-                        styleDisplay = '';
-                    else {
-                        styleDisplay = 'none';
-                        break;
-                    }
-                }
-                tblData.rows[i].style.display = styleDisplay;
-            }
-        }
-    </script>
 
-    <div class="field" id="searchform">
-        <asp:TextBox placeholder="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" OnTextChanged="txtFillter_TextChanged" />
-        <button type="button" id="search">Buscar</button>
+                        <div class="col-sm-3 col-md-6">
+                            <div class="form-group">
+                                <asp:Label ID="Label3" runat="server" Text="N° PRESTAMO"></asp:Label>
+                                <asp:TextBox ID="txtDni" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-sm-9 col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <asp:Label ID="Label1" runat="server" Text="N° CUOTA"></asp:Label>
+                                    <asp:TextBox ID="txtNombreCompleto" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <section style="padding-top: 75px"></section>
+                    </form1>
+                </div>
+            </div>
+            <!-- /form-panel -->
+        </div>
+        <!-- /col-lg-12 -->
     </div>
-    <section style="margin-top:30px"></section>
-    <div style="margin-left: 50px">
 
-        <asp:GridView ID="gv_Tabla_Lista_Registrar_Penalidad" runat="server" OnRowCommand="gv_Tabla_Lista_Registrar_Penalidad_RowCommand" OnPageIndexChanging="gv_Tabla_Lista_Registrar_Penalidad_PageIndexChanging" EmptyDataText="No hay listado de penalidad" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="gv_Tabla_Lista_Registrar_Penalidad_RowDataBound">
-            <Columns>
-                <asp:BoundField DataField="PK_IPre_Cod" HeaderText="N° Prestamo" />
-                <asp:BoundField DataField="DatosCompletos" HeaderText="Datos Completos" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-                  <asp:BoundField DataField="IS_Dni" HeaderText="DNI" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-                <asp:BoundField DataField="DC_FechaFin" HeaderText="Fecha Fin" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-                <asp:BoundField DataField="IC_NumeroCuota" HeaderText="Numero Cuota" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-                <asp:BoundField DataField="FC_MontoCuota" HeaderText="Importe" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-
-
-                <asp:BoundField DataField="DiasRetraso" HeaderText="Dias Retraso" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
-                <asp:BoundField DataField="VEcu_Estado_Cuota" HeaderText="Estado Cuota" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
-                    <HeaderStyle CssClass="text-center"></HeaderStyle>
-
-                    <ItemStyle CssClass="text-center"></ItemStyle>
-                </asp:BoundField>
+    <div class="row mt" style="margin-left:100px">
+      <div class="col-lg-11">
+            <h4><i class="fa fa-angle-right"></i>DATOS SOCIO</h4>
+            <div class="form-panel">
+                <div class=" form">
+                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                        <section style="padding-top: 25px"></section>
 
 
 
-                <asp:TemplateField HeaderText="Registrar" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
-                    <ItemTemplate>
-                        <asp:LinkButton ID="btnRegistrarPenalidad" CssClass="btn btn-success" runat="server" CommandName="Aprobar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Text="Aprobar" Style="color: white"> <span  aria-hidden="true">Registrar Penalidad</span>
-                                                    
-                        </asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-
-            </Columns>
-
-            <HeaderStyle BackColor="#008080" ForeColor="white" Font-Bold="true" />
-        </asp:GridView>
+                        <div class="col-sm-3 col-md-6">
+                            <div class="form-group">
+                                <asp:Label ID="Label2" runat="server" Text="DNI"></asp:Label>
+                                <asp:TextBox ID="TextBox1" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label ID="Label5" runat="server" Text="APELLIDOS"></asp:Label>
+                                <asp:TextBox ID="TextBox3" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
 
 
+                        </div>
+
+                        <div class="col-sm-9 col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <asp:Label ID="Label4" runat="server" Text="NOMBRES COMPLETOS"></asp:Label>
+                                    <asp:TextBox ID="TextBox2" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <asp:Label ID="Label6" runat="server" Text="PATROCINADOR"></asp:Label>
+                                    <asp:TextBox ID="TextBox4" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <section style="padding-top: 160px"></section>
+                    </form1>
+                </div>
+            </div>
+            <!-- /form-panel -->
+        </div>
+        <!-- /col-lg-12 -->
+    </div>
+
+    <div class="row mt" style="margin-left:100px">
+        <div class="col-lg-11">
+            <h4><i class="fa fa-angle-right"></i>DATOS CUOTAS</h4>
+            <div class="form-panel">
+                <div class=" form">
+                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                        <section style="padding-top: 25px"></section>
 
 
+
+                        <div class="col-sm-3 col-md-6">
+                            <div class="form-group">
+                                <asp:Label ID="Label7" runat="server" Text="FECHA FIN CUOTA"></asp:Label>
+                                <asp:TextBox ID="TextBox5" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label ID="Label8" runat="server" Text="DÍAS RETRASO"></asp:Label>
+                                <asp:TextBox ID="TextBox6" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-9 col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <asp:Label ID="Label9" runat="server" Text="ESTADO CUOTA"></asp:Label>
+                                    <asp:TextBox ID="TextBox7" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <asp:Label ID="Label10" runat="server" Text="IMPORTE"></asp:Label>
+                                    <asp:TextBox ID="TextBox8" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <section style="padding-top: 160px"></section>
+                    </form1>
+                </div>
+            </div>
+            <!-- /form-panel -->
+        </div>
+        <!-- /col-lg-12 -->
+    </div>
+
+           <div class="row mt" style="margin-left:100px">
+        <div class="col-lg-11">
+            <h4><i class="fa fa-angle-right"></i>DATOS PENALIDAD</h4>
+            <div class="form-panel">
+                <div class=" form">
+                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                        <section style="padding-top: 25px"></section>
+
+
+
+                        <div class="col-sm-3 col-md-6">
+                            <div class="form-group">
+                                <asp:Label ID="Label11" runat="server" Text="FECHA FIN CUOTA"></asp:Label>
+                                <asp:TextBox ID="TextBox9" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label ID="Label12" runat="server" Text="DÍAS RETRASO"></asp:Label>
+                                <asp:TextBox ID="TextBox10" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-9 col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <asp:Label ID="Label13" runat="server" Text="ESTADO CUOTA"></asp:Label>
+                                    <asp:TextBox ID="TextBox11" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <asp:Label ID="Label14" runat="server" Text="IMPORTE"></asp:Label>
+                                    <asp:TextBox ID="TextBox12" runat="server" class="form-control" Width="80%"></asp:TextBox>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <section style="padding-top: 160px"></section>
+                    </form1>
+                </div>
+            </div>
+            <!-- /form-panel -->
+        </div>
+        <!-- /col-lg-12 -->
     </div>
 
 </asp:Content>

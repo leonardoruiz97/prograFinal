@@ -167,6 +167,7 @@
           <ul class="subList subList--hidden">
                 <li class="subList__item"><a href="WF_Listar_Prestamo_Pendiente_Socio.aspx" style="color:white">Pendientes</a></li>
                  <li class="subList__item"><a href="WF_Listar_Prestamo_Aceptado_Socio.aspx" style="color:white">Aceptados</a></li>
+              <li class="subList__item"><a href="WF_Historial_Prestamo.aspx" style="color:white">Historial Prestamos</a></li
             <%--<li class="subList__item">archives</li>--%>
           </ul>
         </li>

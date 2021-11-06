@@ -118,7 +118,8 @@
 
             </Columns>
 
-            <HeaderStyle BackColor="#6fdefc" ForeColor="Black" Font-Bold="true" />
+           
+              <HeaderStyle BackColor="#008080" ForeColor="white" Font-Bold="true" />
         </asp:GridView>
 
 

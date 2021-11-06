@@ -428,6 +428,9 @@
                             <div id="form" class="form contact-form" style="margin-top: -450px">
                                 <asp:Label ID="txtpa" runat="server" Text="" Visible="false"></asp:Label>
                                 <asp:Label ID="txtafi" runat="server" Text="" Visible="false"></asp:Label>
+                                  <asp:Label ID="lblpkpatrobus" runat="server" Text="Codigo" Visible="false"></asp:Label>
+              <asp:Label ID="lbldniPatrobus" runat="server" Text="Codigo" Visible="false"></asp:Label>
+              <asp:Label ID="lblcantafiliabus" runat="server" Text="Codigo" Visible="false"></asp:Label>
 
                                 <asp:Label ID="txtdnipatrocinador" runat="server" Text="" Visible="false"></asp:Label>
 
@@ -808,6 +811,17 @@
                 })
             }
 
+
+            function EvitarAfiliacion() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'warning',
+                    title: 'Informacion',
+                    text: 'Patrocinador no puede afiliar a más socios',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
 
         </script>
 

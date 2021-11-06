@@ -14,13 +14,13 @@
     
    
      <section style="padding: 20px;"></section>
-     <div id="nombreProducto" style="margin-left:328px">Lista de Prestamo Pendiente</div>
+     <div id="nombreProducto" style="margin-left:158px">Lista de Prestamo Pendiente</div>
   
     
     <div class="sub_head_right">
-    <img src="img/cabecera.png" alt="..." " height="60"  >
+    <img src="img/cabecera.png" alt="..." " height="82"  >
         
-            <div class="body_head" style="margin-left:328px;width:980px" >
+            <div class="body_head" style="margin-left:148px;width:1350px" >
                   <b>Mis Prestamos Pendientes</b>
                 </div>
 
@@ -36,11 +36,11 @@
 
 
          <section style="padding: 10px;"></section>
-    <asp:GridView ID="gv_Tabla_Prestamo_Pendiente_Socio" runat="server" EmptyDataText="Usted no tiene prestamos pendientes" OnPageIndexChanging="gv_Tabla_Prestamo_Pendiente_Socio_PageIndexChanging" OnRowCommand="gv_Tabla_Prestamo_Pendiente_Socio_RowCommand" OnRowDataBound="gv_Tabla_Prestamo_Pendiente_Socio_RowDataBound"     CssClass="table table-bordered table-hover" Width="65%" AutoGenerateColumns="False" GridLines="None">
+    <asp:GridView ID="gv_Tabla_Prestamo_Pendiente_Socio" runat="server" EmptyDataText="Usted no tiene prestamos pendientes" OnPageIndexChanging="gv_Tabla_Prestamo_Pendiente_Socio_PageIndexChanging" OnRowCommand="gv_Tabla_Prestamo_Pendiente_Socio_RowCommand" OnRowDataBound="gv_Tabla_Prestamo_Pendiente_Socio_RowDataBound" CssClass="table table-bordered table-hover" Width="80%" AutoGenerateColumns="False" GridLines="None">
         
         <columns>
     
-            <asp:BoundField DataField="NombreCompleto" HeaderText="Datos Completos" />
+            <asp:BoundField DataField="PK_IPre_Cod" HeaderText="N° Prestamo" />
             <asp:BoundField DataField="FechaRegistro" HeaderText="Fecha Registro" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
                
 <HeaderStyle CssClass="text-center"></HeaderStyle>

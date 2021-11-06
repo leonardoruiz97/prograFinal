@@ -17,5 +17,20 @@ namespace Negocio
             objpatro.buscarpatrocinadordni(patro);
         }
 
+        public void BuscarPatrocinadorXdni(Patrocinador patro)
+        {
+            objpatro.buscarpatrocinadorxdni(patro);
+        }
+
+        public void ActualizarAfiliacionPatrocinador(Patrocinador patro)
+        {
+            objpatro.actualizarafiliacionpatrocinador(patro);
+        }
+
+        public DataTable listarPatrocinadores()
+        {
+            return objpatro.listar_Patrocinadores();
+        }
+
     }
 }

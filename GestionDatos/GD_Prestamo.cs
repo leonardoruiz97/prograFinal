@@ -484,6 +484,31 @@ namespace GestionDatos
         }
 
 
+        public DataTable ListarHistorialdPrestamosxSocio(Socio objSocio)
+        {
+            try
+            {
+                sqlc.Open();
+
+                cmd = new SqlCommand("Sp_HistorialPrestamo", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Fk_IS_Cod", objSocio.PK_IS_Cod);
+
+
+
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
 
 
     }

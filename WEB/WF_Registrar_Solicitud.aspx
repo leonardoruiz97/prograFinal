@@ -109,8 +109,9 @@
 
 
         <section style="padding: 40px"></section>
-
-
+        <asp:Label ID="lblpkpatrobus" runat="server" Text="Codigo" Visible="false"></asp:Label>
+              <asp:Label ID="lbldniPatrobus" runat="server" Text="Codigo" Visible="false"></asp:Label>
+              <asp:Label ID="lblcantafiliabus" runat="server" Text="Codigo" Visible="false"></asp:Label>
         <div class="tab-content" id="myTabContent">
             <section style="padding: 40px"></section>
             <fieldset class="border" style="width: 90%; margin-left: 90px">

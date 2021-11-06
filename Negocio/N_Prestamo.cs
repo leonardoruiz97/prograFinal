@@ -63,6 +63,11 @@ namespace Negocio
             return objpre.listaPrestamosDesembolsado(pre);
         }
 
+        public DataTable listarhistorialprestamos(Socio socio)
+        {
+            return objpre.ListarHistorialdPrestamosxSocio(socio);
+        }
+
     }
 
 }

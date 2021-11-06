@@ -106,7 +106,8 @@ public partial class Home : System.Web.UI.MasterPage
         }
 
         buscarPatrocinador();
-   
+       
+
     }
 
    
@@ -148,10 +149,20 @@ public partial class Home : System.Web.UI.MasterPage
         {
             txtdnipatrocinador.Text = "" + patro.IPa_Dni;
             txtPatro.Text = patro.VPa_Nombre_Completo + " " + patro.VPa_Apellido_Paterno + " " + patro.VPa_Apellido_Materno;
+            lblcantafiliabus.Text = "" + patro.IPa_Cantidad_Afiliaciones;
 
             if (txtCodPat.Text == txtdnipatrocinador.Text)
             {
-                enviarSolicitud();
+                if (int.Parse(lblcantafiliabus.Text) >= 3)
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "EvitarAfiliacion()", true);
+                }
+                else
+                {
+                    enviarSolicitud();
+                }
+              
+               
             }
 
         }
@@ -181,7 +192,8 @@ public partial class Home : System.Web.UI.MasterPage
      
     }
 
-    void buscarAfiliacion()
+
+   void buscarAfiliacion()
     {
         objafi.IA_Dni = int.Parse(txtDni.Text);
         Nafilia.buscarAfiliacionDni(objafi);

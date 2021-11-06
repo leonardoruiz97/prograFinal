@@ -39,6 +39,9 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
 
     Solicitud soli = new Solicitud();
     N_Solicitud Nsoli = new N_Solicitud();
+    Patrocinador patro = new Patrocinador();
+    N_Patrocinador Npatro = new N_Patrocinador();
+
 
 
    
@@ -200,6 +203,7 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             return;
         }
         registrarSolicitud();
+        validarAfiliacionPatrocinador();
         deshabilitarCampos();
 
 
@@ -308,11 +312,41 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
         soli.FK_IESol_Cod = 1;
         soli.FK_IA_Cod = int.Parse(txtafiliacion.Text);
         ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "RegistrarSolicitud()", true);
+       
         Nsoli.RegistrarSolicitud(soli);
      
 
     }
 
+    void validarAfiliacionPatrocinador()
+    {
+        patro.IPa_Dni = int.Parse(txtCodPatrocinador.Text);
+        Npatro.buscarPatrocinadorDni(patro);
+        lblpkpatrobus.Text = "" + patro.PK_IPa_Cod;
+
+        if(int.Parse(lblpkpatrobus.Text) != 0)
+        {
+            lbldniPatrobus.Text = "" + patro.IPa_Dni;
+            lblcantafiliabus.Text = "" + patro.IPa_Cantidad_Afiliaciones;
+
+            if(txtCodPatrocinador.Text == lbldniPatrobus.Text)
+            {
+                if(int.Parse(lblcantafiliabus.Text) < 3)
+                {
+                   
+                    patro.IPa_Dni = int.Parse(txtCodPatrocinador.Text);
+                    patro.IPa_Cantidad_Afiliaciones = int.Parse(lblcantafiliabus.Text) + 1;
+                    Npatro.ActualizarAfiliacionPatrocinador(patro);
+                }
+              
+                
+            }
+        }
+        
+    }
+
+
+  
 
 
     /*  void insertarphoto()
