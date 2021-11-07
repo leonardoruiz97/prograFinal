@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="N_Afiliacion.cs" />
     <Compile Include="N_Cuota.cs" />
-    <Compile Include="N_Pago.cs" />
     <Compile Include="N_Departamento.cs" />
     <Compile Include="N_Detalle_Solicitud.cs" />
     <Compile Include="N_Distrito.cs" />
@@ -51,6 +50,7 @@
     <Compile Include="N_Estado_Solicitud.cs" />
     <Compile Include="N_Frecuencia.cs" />
     <Compile Include="N_Ocupacion.cs" />
+    <Compile Include="N_Pagos.cs" />
     <Compile Include="N_Patrocinador.cs" />
     <Compile Include="N_Penalidad.cs" />
     <Compile Include="N_Prestamo.cs" />

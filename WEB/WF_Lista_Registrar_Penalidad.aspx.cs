@@ -45,7 +45,32 @@ public partial class WF_Lista_Registrar_Penalidad : System.Web.UI.Page
 
     protected void gv_Tabla_Lista_Registrar_Penalidad_RowCommand(object sender, GridViewCommandEventArgs e)
     {
+        if (e.CommandName == "Registrar")
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            txtnumPrestamo.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[0].Text;
+           txtdatossocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[1].Text;
+            txtdnisocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[2].Text;
+            txtfechafin.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[3].Text;
+            txtnumcuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[4].Text;
+            txtmontocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[5].Text;
+            txtdiaretraso.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[6].Text;
+            txtestadocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[7].Text;
 
+            if (txtestadocuota.Text == "Moroso")
+            {
+                Session["pre"] = "" + txtnumPrestamo.Text;
+                Session["cuo"] = "" + txtnumcuota.Text;
+                Session["dni"] = "" + txtdnisocio.Text;
+                Session["fechafin"] = "" + txtfechafin.Text;
+                Session["estacuota"] = "" + txtestadocuota.Text;
+                Session["retra"] = "" + txtdiaretraso.Text;
+                Session["importe"] = "" + txtmontocuota.Text;
+
+                Response.Redirect("WF_Registrar_Penalidad.aspx");
+            }
+            
+        }
     }
 
     protected void gv_Tabla_Lista_Registrar_Penalidad_PageIndexChanging(object sender, GridViewPageEventArgs e)

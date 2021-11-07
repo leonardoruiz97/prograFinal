@@ -35,6 +35,11 @@ namespace Negocio
             objso.buscarsociodni(so);
         }
 
+        public void BuscarCodPatrocinador(Socio so,Afiliacion afi)
+        {
+            objso.buscarcodsociopatrocinador(so,afi);
+        }
+
 
         public void consultarSocioPrestamoxdni(Socio socio, Sexo sex,Estado_Civil ec,Distrito dis ,Ocupacion ocu)
         {

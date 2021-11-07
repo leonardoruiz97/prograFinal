@@ -76,12 +76,3 @@ H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.Core
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\GestionDatos.dll
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\GestionDatos.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\Dominio.dll
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\Dominio.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.AssemblyReference.cache
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.CoreCompileInputs.cache
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.dll
-D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.pdb

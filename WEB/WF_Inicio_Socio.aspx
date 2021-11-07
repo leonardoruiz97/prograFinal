@@ -172,6 +172,18 @@
           </ul>
         </li>
 
+               <li>
+         <div class="navList__subheading row row--align-v-center">
+              <span class="navList__subheading-icon"><i class="fas fa-list"></i></span>
+            <span class="navList__subheading-title">Pagos</span>
+          </div> 
+          <ul class="subList subList--hidden">
+              <li class="subList__item"><a href="WF_Historial_Pagos.aspx" style="color:white">Historial De Pagos</a></li>
+            <%--<li class="subList__item">archives</li>--%>
+          </ul>
+        </li>
+
+
        <%-- <li class="navList__heading">messages<i class="far fa-envelope"></i></li>
         <li>
           <div class="navList__subheading row row--align-v-center">

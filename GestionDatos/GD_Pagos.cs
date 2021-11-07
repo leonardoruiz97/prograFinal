@@ -7,37 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 
+
 namespace GestionDatos
 {
-   public class GD_Pago
+     public class GD_Pagos
     {
         SqlConnection sqlc;
         private SqlDataAdapter dat;
         private SqlCommand cmd;
         private DataSet ds;
-        public GD_Pago()
+        public GD_Pagos()
         {
             sqlc = new SqlConnection(GD_ConexionBD.CadenaConexion);
         }
-
-
-        //public int registrarAmortizacion(Pago amor)
-        //{
-
-        //    cmd = new SqlCommand("Sp_RegistraAmortizacion", sqlc);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.AddWithValue("@VAmor_Mes ", amor.VPago_Mes);
-        //    cmd.Parameters.AddWithValue("@FAmor_Monto_Cuota", amor.FPago_Monto);
-        //    cmd.Parameters.AddWithValue("@DAmor_Fecha_Pago", amor.DPago_Fecha);
-        //    cmd.Parameters.AddWithValue("@FK_IPe_Cod", amor.FK_IPe_Cod);
-        //    cmd.Parameters.AddWithValue("@FK_IPre_Cod", amor.FK_IPre_Cod);
-        //    sqlc.Open();
-        //    cmd.ExecuteNonQuery();
-        //    sqlc.Close();
-        //    return 1;
-        //}
-
-
         public DataTable ListarPagos(Prestamo objprestamo)
         {
             try

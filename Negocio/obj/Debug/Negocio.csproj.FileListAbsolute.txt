@@ -106,14 +106,3 @@ H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInp
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Negocio.dll
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Negocio.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Dominio.dll
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\GestionDatos.dll
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Dominio.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\GestionDatos.pdb
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.csproj.CopyComplete
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.dll
-D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.pdb

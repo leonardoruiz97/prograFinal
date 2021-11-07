@@ -111,6 +111,35 @@ namespace GestionDatos
             sqlc.Close();
         }
 
+        public void buscarcodsociopatrocinador(Socio soc,Afiliacion afi)
+        {
+
+            cmd = new SqlCommand("sp_BuscarSocioPatrocinadorpenalidad", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Dni", soc.IS_Dni);
+            sqlc.Close();
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+
+                if (reader[0] != DBNull.Value)
+                { afi.IA_Cod_Patrocinador = (int)reader[0]; }
+                else
+                { afi.IA_Cod_Patrocinador = 0; }
+
+            
+                soc.estado = 99;
+            }
+
+            else
+            {
+                soc.estado = 1;
+            }
+            sqlc.Close();
+        }
+
 
 
 

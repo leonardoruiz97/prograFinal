@@ -10,15 +10,11 @@ namespace Dominio
     {
         public int PK_IPago_Cod { get; set; }
         public string VPago_Mes { get; set; }
-
         public double FPago_Monto { get; set; }
-
         public DateTime DPago_Fecha { get; set; }
         public int FK_IPe_Cod { get; set; }
-
-        public int FK_IPre_Cod { get; set; }
-
         public int FK_IC_Cod { get; set; }
+
 
     }
 }
