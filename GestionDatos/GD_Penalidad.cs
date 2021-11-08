@@ -63,5 +63,24 @@ namespace GestionDatos
                 throw e;
             }
         }
+
+        public int registrarPrestamo(Penalidad objpe)
+        {
+            cmd = new SqlCommand("sp_registrarPenalidad", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@FPe_Monto", objpe.FPe_Monto);
+            cmd.Parameters.AddWithValue("@VPE_Observacion", objpe.VPE_Observacion);
+            cmd.Parameters.AddWithValue("@FK_IC_Cod", objpe.FK_IC_Cod);
+            
+
+
+
+
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            sqlc.Close();
+            return 1;
+        }
     }
 }

@@ -550,12 +550,12 @@
 
                                     <div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:85px">
                                         <label class="mdl-textfield__label" for="numIngFijoMR">Monto del prestamo vigente</label>
-                                        <asp:TextBox ID="txtMontoPreVigente" runat="server" class="form-control" Width="55%"></asp:TextBox>
+                                        <asp:TextBox ID="txtMontoPreVigente" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="55%"></asp:TextBox>
                                     </div>
                                     <div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left: -80px">
                                         <label class="mdl-textfield__label" for="numIngFijoMR">Numero de Cuotas: </label>
 
-                                        <asp:TextBox ID="TextBox8" runat="server" class="form-control" Width="50%" Height="50%" CssClass="auto-style1" type="number" value="" min="1" max="10" step="1"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox8"  runat="server" class="form-control" Width="50%" Height="50%" CssClass="auto-style1" type="number" value="" min="1" max="10" step="1"></asp:TextBox>
 
 
 
@@ -571,7 +571,7 @@
                                     <div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left: 85px">
                                         <label class="mdl-textfield__label" for="numIngFijoMR">Monto Mensual: </label>
 
-                                        <asp:TextBox ID="TextBox9" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox9" runat="server" onkeypress="javascript:return filterFloat(event,this)" class="form-control" Width="70%"></asp:TextBox>
 
                                     </div>
                                 </div>
@@ -1108,6 +1108,26 @@
                     timer: 2000
                 })
 			}
+
+            function alertCheckSinMarcar1() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Debe marcar la casilla de prestamos vigentes en la cooperativa',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+			}
+
+            function alertCheckSinMarcar2() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Debe marcar la casilla de prestamos vigentes en la cooperativa',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
 
 
 
