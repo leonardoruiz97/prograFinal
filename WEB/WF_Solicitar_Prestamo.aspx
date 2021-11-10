@@ -1292,6 +1292,27 @@
                     showConfirmButton: false,
                     timer: 2000
                 })
+			}
+
+            function alertImagenIngresada() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Imagen Ingresada',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+			}
+
+
+            function alertErrorImagen() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Adjunte Archivo Solicitado',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }
         </script>
 
