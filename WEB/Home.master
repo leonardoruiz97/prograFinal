@@ -455,7 +455,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <asp:TextBox ID="txtCodPat" runat="server" placeholder="Codigo del Patrocinador" class="form-control" Width="150%"></asp:TextBox>
+                                    <asp:TextBox ID="txtCodPat" runat="server" placeholder="Codigo del Patrocinador" MaxLength="8" class="form-control" Width="150%"></asp:TextBox>
 
                                 </div>
                                 <div class="form-group">

@@ -364,11 +364,30 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualPanel3Vacio()", true);
                 return;
             }
+<<<<<<< HEAD
         }
         
 
     
 
+=======
+        }
+
+        if (CheckBox1.Checked != true && CheckBox3.Checked != true)
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar1()", true);
+            return;
+        }
+
+        if (CheckBox4.Checked != true && CheckBox5.Checked != true)
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar2()", true);
+            return;
+        }
+
+
+
+>>>>>>> 810bb92b5b94225c75b4ec1bfa89215f82cdb000
 
 
         PanelPaso2.Visible = false;
@@ -498,7 +517,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         }
 
 
-        if (FileUpReciboLuz != null)
+        if (FileUpReciboLuz != null && FileUpload6.HasFile)
         {
 
             int tamanio = FileUpReciboLuz.PostedFile.ContentLength;
@@ -511,7 +530,15 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Copia_DNI = ImagenOriginal;
 
         }
-        if (FileUpload1 != null)
+        else
+        {
+            // Notify the user that a file was not uploaded.
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+        if (FileUpload1 != null && FileUpload6.HasFile)
         {
 
             int tamanio = FileUpload1.PostedFile.ContentLength;
@@ -524,7 +551,15 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Libreta_Socio  = ImagenOriginal;
 
         }
-        if (FileUpload2 != null)
+        else
+        {
+            // Notify the user that a file was not uploaded.
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+        if (FileUpload2 != null && FileUpload2.HasFile)
         {
 
             int tamanio = FileUpload2.PostedFile.ContentLength;
@@ -537,8 +572,16 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Declaracion_Salud= ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
 
-        if (FileUpload3 != null)
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpload3 != null && FileUpload3.HasFile)
         {
 
             int tamanio = FileUpload3.PostedFile.ContentLength;
@@ -551,8 +594,16 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_FPP = ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
 
-        if (FileUpload4 != null)
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpload4 != null && FileUpload4.HasFile)
         {
 
             int tamanio = FileUpload4.PostedFile.ContentLength;
@@ -565,8 +616,16 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Aportes_Sociales= ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
 
-        if (FileUpload5 != null)
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpload5 != null && FileUpload5.HasFile)
         {
 
             int tamanio = FileUpload5.PostedFile.ContentLength;
@@ -579,9 +638,17 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Declaracion_Jurada = ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
 
 
-        if (FileUpload7 != null)
+        if (FileUpload7 != null && FileUpload7.HasFile)
         {
 
             int tamanio = FileUpload7.PostedFile.ContentLength;
@@ -594,8 +661,16 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Boleta_Pago  = ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
 
-        if (FileUpload6 != null)
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpload6 != null && FileUpload6.HasFile)
         {
 
             int tamanio = FileUpload6.PostedFile.ContentLength;
@@ -609,9 +684,17 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Declaracion_Ingresos = ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
 
 
-        if (FileUpload8 != null)
+        if (FileUpload8 != null && FileUpload8.HasFile)
         {
 
             int tamanio = FileUpload8.PostedFile.ContentLength;
@@ -625,6 +708,17 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             pre.IMPre_Ingresos_Notariales = ImagenOriginal;
 
         }
+        else
+        {
+            // Notify the user that a file was not uploaded.
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+
+
 
         pre.FK_ITPre_Cod = ddltipoprestamo.SelectedIndex;
         //pre.FK_ISe_Cod = ddlsexo.SelectedIndex;
