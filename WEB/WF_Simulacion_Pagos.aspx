@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_Socio.master" AutoEventWireup="true" CodeFile="WF_Simulacion_Pagos.aspx.cs" Inherits="WF_Simulacion_Pagos" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_Socio.master" AutoEventWireup="true" CodeFile="WF_Simulacion_Pagos.aspx.cs" Inherits="WF_Simulacion_Pagos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 <link href="dist/StyleSheet1.css" rel="stylesheet" />

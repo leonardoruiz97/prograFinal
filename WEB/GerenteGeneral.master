@@ -208,6 +208,7 @@
                                 <span>Prestamos</span>
                             </a>
                             <ul class="sub">
+                                 <li><a href="WF_Consultar_Prestamo.aspx"><i class="fa fa-money">Consultar Prestamo </i></a></li>
                                 <li><a href="WF_Listar_Prestamos.aspx"><i class="fa fa-money"> Prestamo Pendientes</i></a></li>
                                 <li><a href="WF_Listar_Prestamos_Aceptados.aspx"><i class="fa fa-dollar"> Prestamo Aceptados</i></a></li>
                                 <li><a href="WF_Listar_Prestamos_Denegados.aspx"><i class="fa fa-credit-card"> Prestamo Denegados</i></a></li>

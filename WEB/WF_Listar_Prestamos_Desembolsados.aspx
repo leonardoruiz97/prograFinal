@@ -1,14 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_Cajera.master" AutoEventWireup="true" CodeFile="WF_Listar_Prestamos_Desembolsados.aspx.cs" Inherits="WF_Listar_Prestamos_Desembolsados" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cajera.master" AutoEventWireup="true" CodeFile="WF_Listar_Prestamos_Desembolsados.aspx.cs" Inherits="WF_Listar_Prestamos_Desembolsados" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<link href="css/StyleSheet.css" rel="stylesheet" />
-    <link href="css/sitegridview.css" rel="stylesheet" />
-    <link href="css/modal.css" rel="stylesheet" />
 
-    <link href="css/Search.css" rel="stylesheet" />
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

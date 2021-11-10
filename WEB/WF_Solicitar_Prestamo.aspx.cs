@@ -68,6 +68,20 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
        
 
     }
+
+    public static bool KeepActiveSession()
+    {
+        if (HttpContext.Current.Session["datos"] != null)
+            return true;
+        else
+            return false;
+    }
+
+
+    public static void SessionAbandon()
+    {
+        HttpContext.Current.Session.Remove("datos");
+    }
     public void listarCamposDdl()
     {
         //ddlsexo.DataSource = Nprovi.listarSexo();
@@ -239,7 +253,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             return;
         }
 
-        if(checkInformacion.Checked != true)
+        if (checkInformacion.Checked != true)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar()", true);
             return;
@@ -316,13 +330,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             }
         }
 
-
-
-        if(CheckBox5.Checked != true)
-        {
-            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar2()", true);
-            return;
-        }
+  
         if (CheckBox4.Checked) 
         {
             if (ddlprestamodeuda.SelectedValue == "")
@@ -356,14 +364,11 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualPanel3Vacio()", true);
                 return;
             }
-        }else
-        {
-            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar1()", true);
-            return;
         }
-      
+        
 
-      
+    
+
 
 
         PanelPaso2.Visible = false;

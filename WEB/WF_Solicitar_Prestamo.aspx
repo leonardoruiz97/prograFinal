@@ -1123,7 +1123,7 @@
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
-                    title: 'Debe marcar la casilla de prestamos vigentes en la cooperativa',
+                    title: 'Debe marcar la casilla de prestamos y/o deudas vigentes en la cooperativa',
                     showConfirmButton: false,
                     timer: 2000
                 })

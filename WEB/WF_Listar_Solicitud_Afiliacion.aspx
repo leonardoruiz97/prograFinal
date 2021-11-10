@@ -97,6 +97,8 @@
         <asp:TextBox placeholder="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" OnTextChanged="txtFillter_TextChanged" />
         <button type="button" id="search">Buscar</button>
     </div>
+
+    <br />
     <div style="margin-left:50px">
 
         <asp:GridView ID="gv_Tabla_Lista_Solicitud" runat="server" OnRowCommand="gv_Tabla_Lista_Solicitud_RowCommand" OnPageIndexChanging="gv_Tabla_Lista_Solicitud_PageIndexChanging" EmptyDataText="No hay Solicitudes pendientes" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="gv_Tabla_Lista_Solicitud_RowDataBound">

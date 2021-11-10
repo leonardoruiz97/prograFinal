@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_Cajera.master" AutoEventWireup="true" CodeFile="WF_Gestionar_Amortizaciones.aspx.cs" Inherits="WF_Gestionar_Amortizaciones" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cajera.master" AutoEventWireup="true" CodeFile="WF_Gestionar_Amortizaciones.aspx.cs" Inherits="WF_Gestionar_Amortizaciones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

@@ -192,10 +192,7 @@ public partial class WF_Detalle_Prestamo : System.Web.UI.Page
 
     }
 
-    protected void btnatras_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("WF_Listar_Prestamos.aspx");
-    }
+   
 
     void validarAccion()
     {
@@ -204,21 +201,21 @@ public partial class WF_Detalle_Prestamo : System.Web.UI.Page
             aceptadas.Visible = true;
             aceptadas.Visible = false;
             denegadas.Visible = false;
-            btnatras.Visible = true;
+            Pendiente.Visible = true;
         }
         if (txtestado.Text == "Aceptado")
         {
            
             aceptadas.Visible = true;
             denegadas.Visible = false;
-            btnatras.Visible = false;
+            Pendiente.Visible = false;
         }
         if (txtestado.Text == "Rechazado")
         {
            
             aceptadas.Visible = false;
             denegadas.Visible = true;
-            btnatras.Visible = false;
+            Pendiente.Visible = false;
         }
     }
 }

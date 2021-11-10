@@ -27,7 +27,7 @@ namespace Negocio
 
         public int registrarPenalidad(Penalidad pe)
         {
-            return objPenalidad.registrarPrestamo(pe);
+            return objPenalidad.registrarPenalidad(pe);
         }
     }
 }

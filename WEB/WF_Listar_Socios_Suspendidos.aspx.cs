@@ -87,7 +87,7 @@ public partial class WF_Listar_Socios_Suspendidos : System.Web.UI.Page
             string estado = DataBinder.Eval(e.Row.DataItem, "VESocio_Estado_Socio").ToString();
             if (estado == "Suspendido")
             {
-                e.Row.Cells[5].ForeColor = System.Drawing.Color.Red;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.Red;
 
 
             }
