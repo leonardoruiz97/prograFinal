@@ -64,10 +64,26 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             PanelPaso2.Visible = false;
             txtfecharegistro.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
+           
+
         }
-       
+        //CheckBox1.Enabled = !CheckBox3.Checked;
+        //CheckBox3.Enabled = !CheckBox1.Checked;
+        CheckBox1.Enabled = !CheckBox3.Checked;
+        CheckBox3.Enabled = !CheckBox1.Checked;
+
+        CheckBox4.Enabled = !CheckBox5.Checked;
+        CheckBox5.Enabled = !CheckBox4.Checked;
 
     }
+    //protected void CheckBox_CheckedChanged(object sender, EventArgs e)
+    //{
+    //    CheckBox1.Enabled = !CheckBox3.Checked;
+    //    CheckBox3.Enabled = !CheckBox1.Checked;
+
+    //    CheckBox4.Enabled = !CheckBox5.Checked;
+    //    CheckBox4.Enabled = !CheckBox5.Checked;
+    //}
 
     public static bool KeepActiveSession()
     {
@@ -328,6 +344,8 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualVacio()", true);
                 return;
             }
+
+            CheckBox3.Enabled = false;
         }
 
   
@@ -364,14 +382,13 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualPanel3Vacio()", true);
                 return;
             }
-<<<<<<< HEAD
+
         }
         
 
     
 
-=======
-        }
+
 
         if (CheckBox1.Checked != true && CheckBox3.Checked != true)
         {
@@ -387,7 +404,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
 
 
 
->>>>>>> 810bb92b5b94225c75b4ec1bfa89215f82cdb000
+
 
 
         PanelPaso2.Visible = false;
@@ -735,6 +752,8 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         Nprestamo.RegistrarPrestamo(pre);
 
     }
+
+   
 
     protected void btnEnviar_Click(object sender, EventArgs e)
     {

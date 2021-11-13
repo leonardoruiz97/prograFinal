@@ -232,7 +232,7 @@
 
    
         <div class="row">
-          <div class="col-lg-11"  style="margin-top:-900px; margin-left:150px">
+          <div class="col-lg-11"  style="margin-top:-900px; margin-left:150px; height:100%;">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
          
               <!-- end custombox -->
