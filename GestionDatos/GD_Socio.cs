@@ -517,7 +517,46 @@ namespace GestionDatos
         }
 
 
+        public void buscarSocii(Socio soc)
+        {
 
+            cmd = new SqlCommand("sp_BuscarSocio", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Dni", soc.IS_Dni);
+            sqlc.Close();
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                if (reader[0] != DBNull.Value)
+                { soc.PK_IS_Cod = (int)reader[0]; }
+                else
+                { soc.PK_IS_Cod = 0; }
+
+                if (reader[1] != DBNull.Value)
+                { soc.VS_Nombre_Completo = (string)reader[1]; }
+                else
+                { soc.VS_Nombre_Completo = ""; }
+
+                if (reader[2] != DBNull.Value)
+                { soc.VS_Apellido_Paterno = (string)reader[2]; }
+                else
+                { soc.VS_Apellido_Paterno = ""; }
+
+                if (reader[3] != DBNull.Value)
+                { soc.VS_Apellido_Materno = (string)reader[3]; }
+                else
+                { soc.VS_Apellido_Materno = ""; }
+                soc.estado = 99;
+            }
+
+            else
+            {
+                soc.estado = 1;
+            }
+            sqlc.Close();
+        }
 
 
 
