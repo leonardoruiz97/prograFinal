@@ -73,7 +73,7 @@
     <section style="margin-top:30px"></section>
     <div style="margin-left: 50px">
 
-
+        <asp:Label ID="txtpkcuota" runat="server" Visible="false"></asp:Label>
         <asp:Label ID="txtnumPrestamo" runat="server" Visible="false"></asp:Label>
         <asp:Label ID="txtdatossocio" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="txtdnisocio" runat="server" Text="" Visible="false"></asp:Label>
@@ -83,8 +83,16 @@
         <asp:Label ID="txtdiaretraso" runat="server" Text="" Visible="false"></asp:Label>
              <asp:Label ID="txtestadocuota" runat="server" Text="" Visible="false"></asp:Label>
 
-        <asp:GridView ID="gv_Tabla_Lista_Registrar_Penalidad" runat="server" OnRowCommand="gv_Tabla_Lista_Registrar_Penalidad_RowCommand" OnPageIndexChanging="gv_Tabla_Lista_Registrar_Penalidad_PageIndexChanging" EmptyDataText="No hay listado de penalidad" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="gv_Tabla_Lista_Registrar_Penalidad_RowDataBound">
+        <style type="text/css">
+    .hide
+    {
+        display: none;
+    }
+</style>
+
+        <asp:GridView ID="gv_Tabla_Lista_Registrar_Penalidad" runat="server" OnRowCommand="gv_Tabla_Lista_Registrar_Penalidad_RowCommand"  OnPageIndexChanging="gv_Tabla_Lista_Registrar_Penalidad_PageIndexChanging" EmptyDataText="No hay listado de penalidad" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="gv_Tabla_Lista_Registrar_Penalidad_RowDataBound">
             <Columns>
+                 <asp:BoundField DataField="PK_IC_Cod" HeaderText="ID Cuota" />
                 <asp:BoundField DataField="PK_IPre_Cod" HeaderText="N° Prestamo" />
                 <asp:BoundField DataField="DatosCompletos" HeaderText="Datos Completos" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                     <HeaderStyle CssClass="text-center"></HeaderStyle>

@@ -33,16 +33,19 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
     Patrocinador patro = new Patrocinador();
     N_Patrocinador Npatro = new N_Patrocinador();
 
+   
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            if (Session["pre"] == null && Session["cuo"] == null && Session["dni"] == null && Session["fechafin"] == null && Session["estacuota"] == null && Session["retra"] == null && Session["importe"] == null)
+            if (Session["pkcuo"] == null && Session["pre"] == null && Session["cuo"] == null && Session["dni"] == null && Session["fechafin"] == null && Session["estacuota"] == null && Session["retra"] == null && Session["importe"] == null)
             {
                 Response.Redirect("WF_Lista_Registrar_Penalidad.aspx");
             }
             else
             {
+                txtpkcuota.Text = Session["pkcuo"].ToString();
                 txtnumprestamo.Text = Session["pre"].ToString();
                 txtnumcuota.Text = Session["cuo"].ToString();
                 txtdni.Text = Session["dni"].ToString();
@@ -51,8 +54,10 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
                 txtdiaretraso.Text = Session["retra"].ToString();
                 txtmonto.Text = Session["importe"].ToString();
                 txttipopenalidad.Text = "Días moroso";
+               
                 buscarDniSocio();
                 aplicarMontoPenalidad();
+               
             }
         }
 
@@ -84,50 +89,80 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
 
     void aplicarMontoPenalidad()
     {
-        if( (int.Parse(txtdiaretraso.Text) >= 1) && (int.Parse(txtdiaretraso.Text) <= 5))
+        if ((int.Parse(txtdiaretraso.Text) >= 1) && (int.Parse(txtdiaretraso.Text) <= 5))
         {
-            txtmontopenalidad.Text = ""+5;
+            txtmontopenalidad.Text = "" + 5;
             txtmontovisible.Text = "S/5 Nuevos Soles";
             txtobservacion.Text = "Estimado Socio con nombre " + txtnombres.Text + " " + txtapellido.Text + " usted se encuentra con una cuota en " +
-           "estado " + txtestadocuota.Text + "por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
-           " una penalidad de " + txtmontovisible.Text;
+         "estado " + txtestadocuota.Text + " por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
+         " una penalidad de " + txtmontovisible.Text;
+
+
+
+
         }
         else if ((int.Parse(txtdiaretraso.Text) > 5) && (int.Parse(txtdiaretraso.Text) <= 10))
         {
             txtmontopenalidad.Text = "" + 20;
             txtmontovisible.Text = "S/20 Nuevos Soles";
             txtobservacion.Text = "Estimado Socio con nombre " + txtnombres.Text + " " + txtapellido.Text + " usted se encuentra con una cuota en " +
-           "estado " + txtestadocuota.Text + "por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
+           "estado " + txtestadocuota.Text + " por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
            " una penalidad de " + txtmontovisible.Text;
+         
         }
         else if ((int.Parse(txtdiaretraso.Text) > 10) && (int.Parse(txtdiaretraso.Text) <= 20))
         {
             txtmontopenalidad.Text = "" + 50;
             txtmontovisible.Text = "S/50 Nuevos Soles";
             txtobservacion.Text = "Estimado Socio con nombre " + txtnombres.Text + " " + txtapellido.Text + " usted se encuentra con una cuota en " +
-           "estado " + txtestadocuota.Text + "por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
+           "estado " + txtestadocuota.Text + " por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
            " una penalidad de " + txtmontovisible.Text;
+      
         }
         else if ((int.Parse(txtdiaretraso.Text) > 20) && (int.Parse(txtdiaretraso.Text) <= 30))
         {
             txtmontopenalidad.Text = "" + 100;
             txtmontovisible.Text = "S/100 Nuevos Soles";
             txtobservacion.Text = "Estimado Socio con nombre " + txtnombres.Text + " " + txtapellido.Text + " usted se encuentra con una cuota en " +
-           "estado " + txtestadocuota.Text + "por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
+           "estado " + txtestadocuota.Text + " por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
            " una penalidad de " + txtmontovisible.Text;
+        
         }
         else if ((int.Parse(txtdiaretraso.Text) > 30))
         {
             txtmontopenalidad.Text = "" + 300;
             txtmontovisible.Text = "S/300 Nuevos Soles";
             txtobservacion.Text = "Estimado Socio con nombre " + txtnombres.Text + " " + txtapellido.Text + " usted se encuentra con una cuota en " +
-           "estado " + txtestadocuota.Text + "por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
+           "estado " + txtestadocuota.Text + " por lo cual el ultimo dia que tuvo para pagar fue  " + txtfechafin.Text + " en consecuencia le corresponde" +
            " una penalidad de " + txtmontovisible.Text;
+          
         }
 
 
+    
 
-       
     }
 
+
+    void registrarPenalidad()
+    {
+        pe.VPE_Observacion = txtobservacion.Text;
+        pe.FPe_Monto = double.Parse(txtmontopenalidad.Text);
+        pe.FK_IC_Cod = int.Parse(txtpkcuota.Text);
+        ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "RegistrarPenalidad()", true);
+        Npena.registrarPenalidad(pe);
+        Console.WriteLine(txtobservacion.Text);
+    }
+
+    protected void btnPenalidad_Click(object sender, EventArgs e)
+    {
+        registrarPenalidad();
+
+
+    }
+
+    protected void btnatras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("WF_Lista_Registrar_Penalidad.aspx");
+    }
 }

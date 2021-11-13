@@ -3,6 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="dist/StyleSheet.css" rel="stylesheet" />
     <link href="dist/StyleSheet1.css" rel="stylesheet" />
+	<script type="text/javascript" src="js	/jquery.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type=checkbox]').live('click', function () {
+				var parent = $(this).parent().attr('id');
+				console.log(parent)
+                $('#' + parent + ' input[type=checkbox]').removeAttr('checked');
+				$(this).attr('checked', 'checked');
+				
+            });
+        });
+    </script>
 	<script type="text/javascript"> 
         function SoloNumeros(e) {
             var key_press = document.all ? key_press = e.keyCode : key_press = e.which;
@@ -516,7 +528,7 @@
 													<label class="mdl-textfield__label" for="numIngFijoMR">¿Tienes algun prestamo vigente en la cooperativa? </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 															
-										          <asp:CheckBox runat="server" ID="CheckBox1" class="mdl-checkbox__input" OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="true"    Text="Si" />
+										          <asp:CheckBox runat="server" ID="CheckBox1" class="mdl-checkbox__input"  OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="true"    Text="Si" />
 													
 												</div>
 
@@ -638,7 +650,7 @@
 													<label class="mdl-textfield__label" for="numIngFijoMR"> Banco: </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 															
-										          <asp:TextBox ID="TextBox5" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="90%"></asp:TextBox>
+										          <asp:TextBox ID="TextBox5" runat="server" class="form-control" Width="90%"></asp:TextBox>
 													
 												</div>
 
@@ -1109,6 +1121,16 @@
                 })
 			}
 
+            function alertCheckAmbosMarcar() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Debe Seleccionar solo una casilla',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
+
             function alertCheckSinMarcar1() {
                 Swal.fire({
                     position: 'center',
@@ -1123,7 +1145,7 @@
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
-                    title: 'Debe marcar la casilla de prestamos vigentes en la cooperativa',
+                    title: 'Debe marcar la casilla de prestamos y/o deudas vigentes en la cooperativa',
                     showConfirmButton: false,
                     timer: 2000
                 })

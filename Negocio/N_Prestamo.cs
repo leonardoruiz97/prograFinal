@@ -67,6 +67,10 @@ namespace Negocio
         {
             return objpre.ListarHistorialdPrestamosxSocio(socio);
         }
+        public DataTable ListarConsultarPrestamo()
+        {
+            return objpre.listarConsultarPrestamo();
+        }
 
         public void ConsultarPrestamoxCodPres(Prestamo pre, Socio soc, Distrito di)
         {

@@ -94,5 +94,11 @@ namespace Negocio
         {
             objso.ActualizarDatoSocios(sol);
         }
+
+        public void BuscarSocii(Socio so)
+        {
+            objso.buscarSocii(so);
+        }
+
     }
 }

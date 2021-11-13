@@ -348,29 +348,25 @@
                         </div>
 
 
-            
-
-                  <section style="padding: 5px"></section>
 
 
-<%--                                    <asp:LinkButton ID="LinkButton1" CssClass="btn btn-success" runat="server" Text="Atras"> <span class="glyphicon glyphicon-ok" style="color:white" aria-hidden="true"></span>
-                                                        <p5 style="color:white">Comprobar</p5>
-                              
-                                    </asp:LinkButton>--%>
-                                   <section style="margin-left:-500px;">
-                                        <asp:LinkButton ID="btnatras" CssClass="btn btn-info" OnClick="btnatras_Click" runat="server" Text="Atras"> <span class="glyphicon glyphicon-chevron-left" style="color:white" aria-hidden="true"></span>
-                                                        <p5 style="color:white">Regresar</p5>
-                                    </asp:LinkButton>
-                </section>
+    <section style="padding: 5px"></section>
+    <div style="margin-left:300px">
 
-                                         <asp:Panel runat="server" ID="aceptadas">
-                                        <a id="btnAceptadas" href="WF_Listar_Prestamos_Aceptados.aspx" class="btn btn-success"><span class="glyphicon glyphicon-chevron-left" style="color:white" aria-hidden="true"></span> Regresar</a>
-                                </asp:Panel>
+    
+    <asp:Panel runat="server" ID="Pendiente">
+        <a id="btnpendiente" href="WF_Listar_Prestamos.aspx" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left" style="color: white" aria-hidden="true"></span>Regresar</a>
 
-                                         <asp:Panel runat="server" ID="denegadas">
-                                        <a id="btnDenegadas" href="WF_Listar_Prestamos_Denegados.aspx" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left" style="color:white" aria-hidden="true"></span> Regresar</a>
-                            </asp:Panel>
-         
+    </asp:Panel>
+
+    <asp:Panel runat="server" ID="aceptadas">
+        <a id="btnAceptadas" href="WF_Listar_Prestamos_Aceptados.aspx" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left" style="color: white" aria-hidden="true"></span>Regresar</a>
+    </asp:Panel>
+
+    <asp:Panel runat="server" ID="denegadas">
+        <a id="btnDenegadas" href="WF_Listar_Prestamos_Denegados.aspx" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left" style="color: white" aria-hidden="true"></span>Regresar</a>
+    </asp:Panel>
+        </div>
     </section>
 
 

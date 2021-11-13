@@ -209,6 +209,7 @@
                             </a>
                             <ul class="sub">
                                 <li><a href="WF_Visualizar_Prestamos.aspx"><i class="fa fa-eye">Visualizar Prestamos</i></a></li>
+
                                 <li><a href="WF_Registrar_Pago.aspx"><i class="fa fa-dollar">Registrar Pago</i></a></li>
                             
                             </ul>
@@ -225,6 +226,21 @@
                             
                             </ul>
                         </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Movimientos</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="WF_Registrar_Aporte.aspx"><i class="fa fa-dollar">Aportes</i></a></li>
+                                <li><a href="WF_Registrar_Ahorros.aspx"><i class="fa fa-dollar">Ahorros</i></a></li>
+                                <li><a href="WF_Lista_Registrar_Penalidad.aspx"><i class="fa fa-dollar">Pagos</i></a></li>
+                                 <li><a href="WF_Listar_Movimientos.aspx"><i class="fa fa-eye">Historial Movimientos</i></a></li>
+                            </ul>
+                        </li>
+
+
                          <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-th"></i>
@@ -232,7 +248,7 @@
                             </a>
                             <ul class="sub">
                                 <li><a href="WF_Lista_Registrar_Penalidad.aspx"><i class="fa fa-eye">Lista Cuotas Morosa</i></a></li>
-                            
+
                             </ul>
                         </li>
 

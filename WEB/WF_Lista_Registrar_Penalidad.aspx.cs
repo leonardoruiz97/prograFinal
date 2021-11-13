@@ -48,17 +48,19 @@ public partial class WF_Lista_Registrar_Penalidad : System.Web.UI.Page
         if (e.CommandName == "Registrar")
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            txtnumPrestamo.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[0].Text;
-           txtdatossocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[1].Text;
-            txtdnisocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[2].Text;
-            txtfechafin.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[3].Text;
-            txtnumcuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[4].Text;
-            txtmontocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[5].Text;
-            txtdiaretraso.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[6].Text;
-            txtestadocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[7].Text;
+            txtpkcuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[0].Text;
+            txtnumPrestamo.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[1].Text;
+           txtdatossocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[2].Text;
+            txtdnisocio.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[3].Text;
+            txtfechafin.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[4].Text;
+            txtnumcuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[5].Text;
+            txtmontocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[6].Text;
+            txtdiaretraso.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[7].Text;
+            txtestadocuota.Text = gv_Tabla_Lista_Registrar_Penalidad.Rows[index].Cells[8].Text;
 
             if (txtestadocuota.Text == "Moroso")
             {
+                Session["pkcuo"] = "" + txtpkcuota.Text;
                 Session["pre"] = "" + txtnumPrestamo.Text;
                 Session["cuo"] = "" + txtnumcuota.Text;
                 Session["dni"] = "" + txtdnisocio.Text;
@@ -87,10 +89,10 @@ public partial class WF_Lista_Registrar_Penalidad : System.Web.UI.Page
             if (estado == "Moroso")
             {
 
-                e.Row.Cells[7].BackColor = System.Drawing.Color.LightCoral;
-                e.Row.Cells[7].ForeColor = System.Drawing.Color.White;
-                e.Row.Cells[7].Height = 4;
-                e.Row.Cells[7].Width = 100;
+                e.Row.Cells[8].BackColor = System.Drawing.Color.LightCoral;
+                e.Row.Cells[8].ForeColor = System.Drawing.Color.White;
+                e.Row.Cells[8].Height = 4;
+                e.Row.Cells[8].Width = 100;
 
 
             }

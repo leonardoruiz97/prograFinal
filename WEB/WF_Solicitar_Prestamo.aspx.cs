@@ -64,9 +64,39 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             PanelPaso2.Visible = false;
             txtfecharegistro.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-        }
-       
+           
 
+        }
+        //CheckBox1.Enabled = !CheckBox3.Checked;
+        //CheckBox3.Enabled = !CheckBox1.Checked;
+        CheckBox1.Enabled = !CheckBox3.Checked;
+        CheckBox3.Enabled = !CheckBox1.Checked;
+
+        CheckBox4.Enabled = !CheckBox5.Checked;
+        CheckBox5.Enabled = !CheckBox4.Checked;
+
+    }
+    //protected void CheckBox_CheckedChanged(object sender, EventArgs e)
+    //{
+    //    CheckBox1.Enabled = !CheckBox3.Checked;
+    //    CheckBox3.Enabled = !CheckBox1.Checked;
+
+    //    CheckBox4.Enabled = !CheckBox5.Checked;
+    //    CheckBox4.Enabled = !CheckBox5.Checked;
+    //}
+
+    public static bool KeepActiveSession()
+    {
+        if (HttpContext.Current.Session["datos"] != null)
+            return true;
+        else
+            return false;
+    }
+
+
+    public static void SessionAbandon()
+    {
+        HttpContext.Current.Session.Remove("datos");
     }
     public void listarCamposDdl()
     {
@@ -239,7 +269,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             return;
         }
 
-        if(checkInformacion.Checked != true)
+        if (checkInformacion.Checked != true)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar()", true);
             return;
@@ -314,15 +344,11 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualVacio()", true);
                 return;
             }
+
+            CheckBox3.Enabled = false;
         }
 
-
-
-        if(CheckBox5.Checked != true)
-        {
-            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar2()", true);
-            return;
-        }
+  
         if (CheckBox4.Checked) 
         {
             if (ddlprestamodeuda.SelectedValue == "")
@@ -357,19 +383,22 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 return;
             }
         }
+        
+
 
         if (CheckBox1.Checked != true && CheckBox3.Checked != true)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar1()", true);
             return;
         }
+      
 
         if (CheckBox4.Checked != true && CheckBox5.Checked != true)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar2()", true);
             return;
         }
-
+ 
 
 
 
@@ -719,6 +748,8 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         Nprestamo.RegistrarPrestamo(pre);
 
     }
+
+   
 
     protected void btnEnviar_Click(object sender, EventArgs e)
     {

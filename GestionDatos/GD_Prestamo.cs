@@ -383,7 +383,7 @@ namespace GestionDatos
 
 
 
-        public void ConsultarPrestamoSocio(Prestamo pre,Socio soc)
+        public void ConsultarPrestamoSocio(Prestamo pre, Socio soc)
         {
 
             cmd = new SqlCommand("Sp_ConsultarPrestamoSocio", sqlc);
@@ -506,8 +506,7 @@ namespace GestionDatos
             {
                 throw e;
             }
-        }
-
+        }        
         public void ConsultarPrestamoxCodPres(Prestamo pre, Socio soc, Distrito di)
         {
             cmd = new SqlCommand("Sp_ConsultarPrestamoxCodPres", sqlc);
@@ -615,7 +614,25 @@ namespace GestionDatos
 
             return listarPrestamos;
         }
+        public DataTable listarConsultarPrestamo()
+        {
+            try
+            {
+                sqlc.Close();
+                sqlc.Open();
+                cmd = new SqlCommand("SP_ConsultarTodosPrestamo", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
 
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
     }
 }

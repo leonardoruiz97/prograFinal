@@ -43,6 +43,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
          <asp:Label ID="txtpksocio" runat="server" Text="" Visible="false"></asp:Label>
+       <asp:Label ID="txtpkcuota" runat="server" Text="" Visible="false"></asp:Label>
       <asp:Label ID="txtcodPatrocinador" runat="server" Text="" Visible="false"></asp:Label>
     <!--main content start-->
         <h3 style="text-align: center; color: black"><b>REGISTRAR PENALIDAD</b></h3>
@@ -53,7 +54,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS DEL PRESTAMO</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 
@@ -93,7 +94,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS SOCIO</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 
@@ -186,7 +187,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS PENALIDAD</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 
@@ -231,7 +232,7 @@
 
    
         <div class="row">
-          <div class="col-lg-11"  style="margin-top:-900px; margin-left:150px">
+          <div class="col-lg-11"  style="margin-top:-900px; margin-left:150px; height:100%;">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
          
               <!-- end custombox -->
@@ -249,7 +250,7 @@
                   <hr>
                 </div>
                 <div class="icn-main-container">
-                  <span class="icn-container">S/5aS/300</span>
+                  <span class="icn-container">S/.</span>
                 </div>
                 <p>El monto por penalidad se aplicará dependiendo de los días de retraso que tenga en el pago de su cuota.</p>
                 <ul class="pricing">
@@ -257,10 +258,14 @@
                   <li>5 a 10 Días de retraso = S/20.</li>
                   <li>10 a 20 Días de retraso = S/50.</li>
                   <li>20 a 30 Días de retraso = S/100.</li>
-                  <li>30 Días de retraso = S/300.</li>
+                  <li>30 Días a más días de retraso = S/300.</li>
                  
                 </ul>
-                <a class="btn btn-theme" href="#">Aplicar Penalidad</a>
+               <%-- <a  class="btn btn-theme" href="#">Aplicar Penalidad</a>--%>
+                
+                   <asp:Button class="btn btn-theme" runat="server" ID="btnPenalidad" Text="Aplicar Penalidad" OnClick="btnPenalidad_Click"></asp:Button>
+                  <br /><br />
+                  <asp:Button class="btn btn-info" runat="server" ID="btnatras" Text="Regresar" Width="30%" OnClick="btnatras_Click"></asp:Button>
               </div>
               <!-- end custombox -->
             </div>
@@ -268,13 +273,26 @@
           </div>
           <!--  /col-lg-12 -->
         </div>
+   
 
 
 
 
 
-
-
+     <!-- Alertas -->
+        <script src="js/sweetalert.js"></script>
+        <script>
+            function RegistrarPenalidad() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Registrado',
+                    text: 'Se Registro la penalidad correctamente',
+                    showConfirmButton: false,
+                    timer: 3000
+                })
+            }
+        </script>
 
 
 

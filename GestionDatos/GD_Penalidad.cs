@@ -64,11 +64,10 @@ namespace GestionDatos
             }
         }
 
-        public int registrarPrestamo(Penalidad objpe)
+        public int registrarPenalidad(Penalidad objpe)
         {
             cmd = new SqlCommand("sp_registrarPenalidad", sqlc);
             cmd.CommandType = CommandType.StoredProcedure;
-
             cmd.Parameters.AddWithValue("@FPe_Monto", objpe.FPe_Monto);
             cmd.Parameters.AddWithValue("@VPE_Observacion", objpe.VPE_Observacion);
             cmd.Parameters.AddWithValue("@FK_IC_Cod", objpe.FK_IC_Cod);

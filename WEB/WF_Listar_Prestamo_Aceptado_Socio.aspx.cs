@@ -72,7 +72,7 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             string estado = DataBinder.Eval(e.Row.DataItem, "EstadoDePrestamo").ToString();
             if (estado == "Aceptado")
             {
-                e.Row.Cells[8].ForeColor = System.Drawing.Color.Green;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.Green;
 
 
             }
@@ -85,13 +85,14 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
 
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            string numPrestamo = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[0].Text;
-            txtNomSocioprestamoAceptada.Text = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[1].Text;
-            DateTime fecha = Convert.ToDateTime(gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[2].Text);
-            string cuotas = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[3].Text;
-            string residencia = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[4].Text;
-            string importe = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[5].Text;
-            string estado = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[8].Text;
+            string numPrestamo = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[0].Text;   
+            DateTime fecha = Convert.ToDateTime(gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[1].Text);
+            string cuotas = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[2].Text;
+            string residencia = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[3].Text;
+            string importe = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[4].Text;
+            string tasamen = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[5].Text;
+            string tcea = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[6].Text;
+            string estado = gv_Tabla_Prestamo_Aceptado_Socio.Rows[index].Cells[7].Text;
             DateTime fechaInicio = fecha.AddDays(1);
             DateTime fechaExpiracion = fecha.AddDays(7);
             txtNumPrestamo.Text = numPrestamo;
@@ -100,18 +101,18 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             txtFechaRegistro.Text = fecha.ToString("dd/MM/yyyy");
             txtRangoFecha.Text = fechaInicio.ToString("dd/MM/yyyy") + " " + "hasta" + " " + fechaExpiracion.ToString("dd/MM/yyyy");
             txtfechafin.Text = fechaExpiracion.ToString("dd/MM/yyyy");
-
+            txttcea.Text = tcea;
 
             calcular();
   
 
-            /*actulizar estado*/
-            pre.PK_IPre_Cod = int.Parse(txtNumPrestamo.Text);
-            pre.FK_IEPre = 4;
-            Npre.ActualizarEstadoPrestamo(pre);
+            ///*actulizar estado*/
+            //pre.PK_IPre_Cod = int.Parse(txtNumPrestamo.Text);
+            //pre.FK_IEPre = 4;
+            //Npre.ActualizarEstadoPrestamo(pre);
 
-
-            tablitapdf("GENERAR COMPROBANTE PRESTAMO");
+            DataTable dtbl = MakeDataTable();
+            tablitapdf(dtbl,"GENERAR COMPROBANTE PRESTAMO");
 
             
 
@@ -206,10 +207,74 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
 
 
 
+    DataTable MakeDataTable()
+    {
+        double strMonto = double.Parse(txtImportePrestamoAceptado.Text);
+        int meses = int.Parse(txtNumCuotas.Text);
+        double InterecAnual = Convert.ToDouble(txttcea.Text);
+        double tasaPorcentual = InterecAnual / 100;
+        double potenciaNumero = (1 + tasaPorcentual);
+        double potenciaVariable = Math.Pow(potenciaNumero, -meses);
+        double Cuotaaa = strMonto * (tasaPorcentual / (1 - potenciaVariable));
+        double numCuota = Math.Round(Cuotaaa, 2);
+        double INTERES = 0;
+        double TINTERES = 0;
+        double CAPITAL = 0;
+        double TAMORTIZADO = 0;
+        double TCUOTA = 0;
+        double SALDOINICIAL = 0;
+        double SALDORESTANTE = 0;
+        double ACUMULADO = 0;
+        double SALDOFINAL = strMonto;
+        DataTable data = new DataTable();
+        data.Columns.Add("Mes");
+        data.Columns.Add("Fecha");
+        data.Columns.Add("Saldo Inicial");
+        data.Columns.Add("Amortizacion");
+        data.Columns.Add("Interes");
+        data.Columns.Add("Cuota");
+        data.Columns.Add("Saldo Capital");
+        for (int I = 1; I < meses + 1; I++)
+        {
+            //INTERES APLICADO A LA TASA
+            TINTERES += INTERES;
+            ACUMULADO += INTERES; //
+            SALDOINICIAL = SALDOFINAL;
+            CAPITAL = Math.Round(numCuota, 2);
+            SALDOFINAL -= CAPITAL;
+            SALDORESTANTE = SALDOINICIAL - CAPITAL;
+            INTERES = Math.Round(SALDOINICIAL * tasaPorcentual, 2);
+            TAMORTIZADO = Math.Round(numCuota - INTERES, 2);
 
-   
+            if (SALDORESTANTE < 0)
+            {
+                SALDORESTANTE = 0;
+            }
+            DateTime FFecha = Convert.ToDateTime(txtFechaRegistro.Text);
+            FFecha = FFecha.AddMonths(I);
 
-    public void tablitapdf(string strHeader)
+
+
+            data.Rows.Add(String.Format("Mes {0}", I), FFecha.ToString("dd/MM/yyyy"), SALDOINICIAL.ToString(), TAMORTIZADO.ToString(), INTERES.ToString(), numCuota.ToString(), SALDORESTANTE.ToString());
+
+        }
+        return data;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void tablitapdf(DataTable dtblTable,string strHeader)
     {
         try
         {
@@ -499,6 +564,86 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             pdfDoc.Add(Table3);
 
             #endregion
+       
+
+            pdfDoc.Add(new Phrase("\n", FontB8));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+
+            pdfDoc.Add(new Paragraph(12, "                                            CRONOGRAMA DE SIMULACIÓN DE PAGOS", FontB12));
+            pdfDoc.Add(new Phrase("\n", FontB8));
+
+            #region Tabla4-Detalles
+            PdfPTable Table4 = new PdfPTable(dtblTable.Columns.Count);
+            float[] widths4 = { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f };
+            Table4.WidthPercentage = 95;
+            Table4.SetWidths(widths4);
+
+
+
+            BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            for (int j = 0; j < dtblTable.Columns.Count; j++)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.BackgroundColor = BaseColor.GRAY;
+                cell.AddElement(new Chunk(dtblTable.Columns[j].ColumnName.ToUpper(), FontB8));
+                Table4.AddCell(cell);
+
+            }
+
+
+            //table data
+            for (int i = 0; i < dtblTable.Rows.Count; i++)
+            {
+                for (int j = 0; j < dtblTable.Columns.Count; j++)
+                {
+                    PdfPCell prueba = new PdfPCell(new Phrase(dtblTable.Rows[i][j].ToString(), FontB8));
+                    Table4.AddCell(dtblTable.Rows[i][j].ToString());
+
+
+                }
+
+            }
+
+         
+       
+         
+            pdfDoc.Add(Table4);
+
+
+
+            #endregion
+
+            #region Tabla3-Cliente
+            PdfPTable Table5 = new PdfPTable(2);
+            float[] widths5 = { 2.0f, 8.0f };
+            Table3.WidthPercentage = 100;
+            Table3.SetWidths(widths5);
+            Table3.AddCell(CVacio);
+            Table3.AddCell(CVacio);
+            Table3.AddCell(CVacio);
+            Table3.AddCell(CVacio);
+            col2 = new PdfPCell(new Phrase("https://www.coopacsancosme.com/", FontB8));
+            col2.Border = 0;
+            col2.PaddingTop = 300;
+            col2.PaddingLeft = -50;
+            col2.Colspan = 2;
+
+            Table5.AddCell(col2);
+
+
+
+            Table5.AddCell(CVacio);
+            Table5.AddCell(CVacio);
+            pdfDoc.Add(Table5);
+            #endregion
+
+
+
+
 
             for (iFila = 1; iFila < 15; iFila++)
             {
