@@ -54,7 +54,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS DEL PRESTAMO</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 
@@ -94,7 +94,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS SOCIO</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 
@@ -187,7 +187,7 @@
             <h4><i class="fa fa-angle-right"></i>DATOS PENALIDAD</h4>
             <div class="form-panel">
                 <div class=" form">
-                    <form1 class="cmxform form-horizontal style-form" id="commentForm2" method="get" action="">
+                    <form1 class="cmxform form-horizontal style-form">
                         <section style="padding-top: 25px"></section>
 
 

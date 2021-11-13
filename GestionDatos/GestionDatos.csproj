@@ -44,6 +44,7 @@
     <Compile Include="GD_Cuota.cs" />
     <Compile Include="GD_Estado_Solicitud.cs" />
     <Compile Include="GD_Frecuencia.cs" />
+    <Compile Include="GD_Movimiento.cs" />
     <Compile Include="GD_Pagos.cs" />
     <Compile Include="GD_Penalidad.cs" />
     <Compile Include="GD_Profesion.cs" />

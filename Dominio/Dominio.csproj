@@ -44,6 +44,7 @@
     <Compile Include="Afiliacion.cs" />
     <Compile Include="Cuota.cs" />
     <Compile Include="Estado_Cuota.cs" />
+    <Compile Include="Movimiento.cs" />
     <Compile Include="Pago.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="Detalle_Solicitud.cs" />

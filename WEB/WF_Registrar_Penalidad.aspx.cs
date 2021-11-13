@@ -54,6 +54,7 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
                 txtdiaretraso.Text = Session["retra"].ToString();
                 txtmonto.Text = Session["importe"].ToString();
                 txttipopenalidad.Text = "Días moroso";
+               
                 buscarDniSocio();
                 aplicarMontoPenalidad();
                

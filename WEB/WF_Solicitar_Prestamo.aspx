@@ -650,7 +650,7 @@
 													<label class="mdl-textfield__label" for="numIngFijoMR"> Banco: </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 															
-										          <asp:TextBox ID="TextBox5" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="90%"></asp:TextBox>
+										          <asp:TextBox ID="TextBox5" runat="server" class="form-control" Width="90%"></asp:TextBox>
 													
 												</div>
 
@@ -1120,6 +1120,16 @@
                     timer: 2000
                 })
 			}
+
+            function alertCheckAmbosMarcar() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Debe Seleccionar solo una casilla',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
 
             function alertCheckSinMarcar1() {
                 Swal.fire({

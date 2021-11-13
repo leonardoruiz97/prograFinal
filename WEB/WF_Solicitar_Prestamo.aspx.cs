@@ -382,12 +382,8 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertMontoMensualPanel3Vacio()", true);
                 return;
             }
-
         }
         
-
-    
-
 
 
         if (CheckBox1.Checked != true && CheckBox3.Checked != true)
@@ -395,14 +391,14 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar1()", true);
             return;
         }
+      
 
         if (CheckBox4.Checked != true && CheckBox5.Checked != true)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertCheckSinMarcar2()", true);
             return;
         }
-
-
+ 
 
 
 
