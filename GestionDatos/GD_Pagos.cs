@@ -43,5 +43,20 @@ namespace GestionDatos
                 throw e;
             }
         }
+
+        public int registrarPagoxCuota(Pago objpag)
+        {
+            cmd = new SqlCommand("Sp_RegistrarPagoxCuota", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@VPago_Mes", objpag.VPago_Mes);
+            cmd.Parameters.AddWithValue("@FPago_Monto", objpag.FPago_Monto);
+            cmd.Parameters.AddWithValue("@FK_IC_Cod", objpag.FK_IC_Cod);
+
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            sqlc.Close();
+            return 1;
+        }
     }
 }

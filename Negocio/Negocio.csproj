@@ -49,6 +49,7 @@
     <Compile Include="N_EstadoCivil.cs" />
     <Compile Include="N_Estado_Solicitud.cs" />
     <Compile Include="N_Frecuencia.cs" />
+    <Compile Include="N_Movimiento.cs" />
     <Compile Include="N_Ocupacion.cs" />
     <Compile Include="N_Pagos.cs" />
     <Compile Include="N_Patrocinador.cs" />

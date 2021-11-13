@@ -18,7 +18,7 @@ namespace Negocio
             }
 
 
-            public int RegistrarPrestamo(Prestamo pre)
+        public int RegistrarPrestamo(Prestamo pre)
             {
                 return objpre.registrarPrestamo(pre);
             }
@@ -68,6 +68,15 @@ namespace Negocio
             return objpre.ListarHistorialdPrestamosxSocio(socio);
         }
 
+        public void ConsultarPrestamoxCodPres(Prestamo pre, Socio soc, Distrito di)
+        {
+            objpre.ConsultarPrestamoxCodPres(pre, soc, di);
+        }
+
+        public List<Prestamo> ListarPrestamosCod()
+        {
+            return objpre.ListarPrestamos();
+        }
     }
 
 }

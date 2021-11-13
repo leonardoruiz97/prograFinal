@@ -24,5 +24,20 @@ namespace Negocio
         {
             return objCuota.listarCuotaMoroso(cu);
         }
+
+        public void ActualizarEstadoCuota(Cuota cuo)
+        {
+            objCuota.ActualizarEstadoCuota(cuo);
+        }
+
+        public void ConsultarImporteAPagarxCuota(Cuota cuo)
+        {
+            objCuota.ConsultarImporteAPagarxCuota(cuo);
+        }
+
+        public DataTable ListarCuotasxPrestamo(Cuota cu)
+        {
+            return objCuota.listarCuotasxPrestamo(cu);
+        }
     }
 }

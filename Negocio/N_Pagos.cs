@@ -24,5 +24,10 @@ namespace Negocio
         {
             return objpa.ListarPagos(pa);
         }
+
+        public int RegistrarPagoxCuota(Pago pag)
+        {
+            return objpa.registrarPagoxCuota(pag);
+        }
     }
 }

@@ -53,3 +53,9 @@ H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.CoreCompileInp
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.pdb
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\bin\Debug\Dominio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\bin\Debug\Dominio.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\obj\Debug\Dominio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\obj\Debug\Dominio.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
