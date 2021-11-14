@@ -106,6 +106,19 @@ H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInp
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
+<<<<<<< HEAD
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\Negocio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\Negocio.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\Dominio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\GestionDatos.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\Dominio.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\bin\Debug\GestionDatos.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\obj\Debug\Negocio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\Negocio\obj\Debug\Negocio.pdb
+=======
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Negocio.dll
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Negocio.pdb
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\bin\Debug\Dominio.dll
@@ -117,3 +130,4 @@ D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.csproj.CoreCompileI
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.dll
 D:\GIT PROYECTO SWGISC\prograFinal\Negocio\obj\Debug\Negocio.pdb
+>>>>>>> 2e117e603b0885bcbfe2e51c888694f135425927

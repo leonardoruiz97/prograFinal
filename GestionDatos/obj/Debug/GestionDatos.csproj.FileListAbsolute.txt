@@ -76,6 +76,17 @@ H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.Core
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.dll
 H:\PROGRA_FINAL\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.pdb
+<<<<<<< HEAD
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\bin\Debug\GestionDatos.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\bin\Debug\GestionDatos.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\bin\Debug\Dominio.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\bin\Debug\Dominio.pdb
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.AssemblyReference.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.CoreCompileInputs.cache
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\obj\Debug\GestionDatos.dll
+C:\Users\CAPLIMA9005\Documents\TP5\Progra de TP\prograFinal\GestionDatos\obj\Debug\GestionDatos.pdb
+=======
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\GestionDatos.dll
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\GestionDatos.pdb
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\bin\Debug\Dominio.dll
@@ -85,3 +96,4 @@ D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.Co
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.dll
 D:\GIT PROYECTO SWGISC\prograFinal\GestionDatos\obj\Debug\GestionDatos.pdb
+>>>>>>> 2e117e603b0885bcbfe2e51c888694f135425927

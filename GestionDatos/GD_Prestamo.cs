@@ -506,10 +506,114 @@ namespace GestionDatos
             {
                 throw e;
             }
+        }        
+        public void ConsultarPrestamoxCodPres(Prestamo pre, Socio soc, Distrito di)
+        {
+            cmd = new SqlCommand("Sp_ConsultarPrestamoxCodPres", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@PK_IPre_Cod ", pre.PK_IPre_Cod);
+            sqlc.Close();
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                if (reader[0] != DBNull.Value)
+                { soc.PK_IS_Cod = (int)reader[0]; }
+                else
+                { soc.PK_IS_Cod = 0; }
+
+                if (reader[1] != DBNull.Value)
+                { soc.VS_Nombre_Completo = (string)reader[1]; }
+                else
+                { soc.VS_Nombre_Completo = ""; }
+
+                if (reader[2] != DBNull.Value)
+                { soc.VS_Apellido_Paterno = (string)reader[2]; }
+                else
+                { soc.VS_Apellido_Paterno = ""; }
+
+                if (reader[3] != DBNull.Value)
+                { soc.VS_Apellido_Materno = (string)reader[3]; }
+                else
+                { soc.VS_Apellido_Materno = ""; }
+
+                if (reader[4] != DBNull.Value)
+                { soc.IS_Dni = (int)reader[4]; }
+                else
+                { soc.IS_Dni = 0; }
+
+                if (reader[5] != DBNull.Value)
+                { di.VDi_Nombre = (string)reader[5]; }
+                else
+                { di.VDi_Nombre = ""; }
+
+                if (reader[6] != DBNull.Value)
+                { pre.FPre_Importe = (double)reader[6]; }
+                else
+                { pre.FPre_Importe = 0; }
+
+                if (reader[7] != DBNull.Value)
+                { pre.FPre_Tcea = (double)reader[7]; }
+                else
+                { pre.FPre_Tcea = 0; }
+
+                if (reader[8] != DBNull.Value)
+                { pre.IPre_Cuotas = (int)reader[8]; }
+                else
+                { pre.IPre_Cuotas = 0; }
+
+                if (reader[9] != DBNull.Value)
+                { pre.DPre_Fecha_Registro = (DateTime)reader[9]; }
+                else
+                { pre.DPre_Fecha_Registro = DateTime.Parse("01/01/2000"); }
+
+                if (reader[10] != DBNull.Value)
+                { pre.FK_IEPre = (int)reader[10]; }
+                else
+                { pre.FK_IEPre = 0; }
+            }
         }
 
-    
+        public List<Prestamo> ListarPrestamos()
+        {
+            List<Prestamo> listarPrestamos = new List<Prestamo>();
 
+            try
+            {
+                cmd = new SqlCommand("Sp_ListarPrestamosCod", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sqlc.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Crear objetos de tipo rhHorarios
+                    Prestamo pres = new Prestamo();
+                    //objDocumento.Descripcion = dr["schName"].ToString();
+                    if (reader[0] != DBNull.Value)
+                    { pres.PK_IPre_Cod = (int)reader[0]; }
+                    else
+                    { pres.PK_IPre_Cod = 0; }
+
+
+                    // añadir a la lista de objetos
+                    listarPrestamos.Add(pres);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sqlc.Close();
+            }
+
+            return listarPrestamos;
+        }
         public DataTable listarConsultarPrestamo()
         {
             try
@@ -529,9 +633,6 @@ namespace GestionDatos
                 throw e;
             }
         }
-
-
-
 
     }
 }

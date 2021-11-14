@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Cuota
     {
-            public int PK_IC_Cod { get; set; }
+        public int PK_IC_Cod { get; set; }
 
         public int IC_NumeroCuota { get; set; }
 
