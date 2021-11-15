@@ -67,8 +67,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
            
 
         }
-        //CheckBox1.Enabled = !CheckBox3.Checked;
-        //CheckBox3.Enabled = !CheckBox1.Checked;
+
         CheckBox1.Enabled = !CheckBox3.Checked;
         CheckBox3.Enabled = !CheckBox1.Checked;
 
@@ -76,14 +75,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         CheckBox5.Enabled = !CheckBox4.Checked;
 
     }
-    //protected void CheckBox_CheckedChanged(object sender, EventArgs e)
-    //{
-    //    CheckBox1.Enabled = !CheckBox3.Checked;
-    //    CheckBox3.Enabled = !CheckBox1.Checked;
-
-    //    CheckBox4.Enabled = !CheckBox5.Checked;
-    //    CheckBox4.Enabled = !CheckBox5.Checked;
-    //}
+ 
 
     public static bool KeepActiveSession()
     {
@@ -399,9 +391,6 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             return;
         }
  
-
-
-
 
         PanelPaso2.Visible = false;
         PanelPaso1.Visible = false;

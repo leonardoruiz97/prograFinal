@@ -20,10 +20,10 @@ namespace Negocio
             objMov = new GD_Movimiento();
         }
 
-        public int RegistrarMovimientoxCuotaPagada(Movimiento mov)
-        {
-            return objMov.registrarMovimientoxCuotaPagada(mov);
 
+        public int RegistrarMovimientoxCuotaPagada(Movimiento mov, Cuota cuo)
+        {
+            return objMov.registrarMovimientoxCuotaPagada(mov, cuo);
         }
 
         public int registrarMovimiento(Movimiento mo)
