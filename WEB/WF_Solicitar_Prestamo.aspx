@@ -775,7 +775,7 @@
                                                     
                                                   <itemtemplate>
                                
-                                                  <asp:FileUpload ID="FileUpReciboLuz" CssClass="form-control glyphicon glyphicon-download-alt"  runat="server" Width="100%" Height="6%" />
+                                                  <asp:FileUpload ID="FileUpCopiaDNI" CssClass="form-control glyphicon glyphicon-download-alt"  runat="server" Width="100%" Height="6%" />
                                                   </itemtemplate>
                                                    </div>
 													</div>

@@ -81,6 +81,20 @@ namespace Negocio
         {
             return objpre.ListarPrestamos();
         }
+        public DataTable ConsultarPrestamoxFecha(Prestamo pre)
+        {
+            return objpre.ConsultarPrestamoxFecha(pre);
+        }
+
+        public DataTable ConsultarPrestamoxDni(Socio socio)
+        {
+            return objpre.ConsultarPrestamoxDni(socio);
+        }
+
+        public DataTable ConsultaEstadoDePrestamos(Prestamo pre)
+        {
+            return objpre.ConsultaEstadoDePrestamos(pre);
+        }
     }
 
 }

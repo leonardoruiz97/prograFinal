@@ -90,14 +90,14 @@
                         <div class="col-sm-3 col-md-6">
                           <div class="form-group">
                                     <asp:Label ID="Label1" runat="server" Text="NOMBRES COMPLETOS"></asp:Label>
-                                    <asp:TextBox ID="txtnombres" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                    <asp:TextBox ID="txtnombres" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                                 </div>
                         </div>
 
                         <div class="col-sm-9 col-md-6">
                               <div class="form-group">
                                 <asp:Label ID="Label5" runat="server" Text="APELLIDOS"></asp:Label>
-                                <asp:TextBox ID="txtapellido" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                <asp:TextBox ID="txtapellido" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                              </div>
                          </div>
 

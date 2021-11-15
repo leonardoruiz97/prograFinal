@@ -173,7 +173,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
     {
         if (ddltipoprestamo.SelectedIndex == 1)
         {
-            double tasamensual = 1.00;
+            double tasamensual = 1.03;
             double tasaanual = 12.68;
             txttasamensual.Text = tasamensual.ToString();
             txttasaanual.Text = tasaanual.ToString();
@@ -530,13 +530,13 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         }
 
 
-        if (FileUpReciboLuz != null && FileUpload6.HasFile)
+        if (FileUpCopiaDNI != null && FileUpCopiaDNI.HasFile)
         {
 
-            int tamanio = FileUpReciboLuz.PostedFile.ContentLength;
+            int tamanio = FileUpCopiaDNI.PostedFile.ContentLength;
             byte[] ImagenOriginal = new byte[tamanio];
-            FileUpReciboLuz.PostedFile.InputStream.Read(ImagenOriginal, 0, tamanio);
-            Bitmap ImagenOriginalBinaria = new Bitmap(FileUpReciboLuz.PostedFile.InputStream);
+            FileUpCopiaDNI.PostedFile.InputStream.Read(ImagenOriginal, 0, tamanio);
+            Bitmap ImagenOriginalBinaria = new Bitmap(FileUpCopiaDNI.PostedFile.InputStream);
 
 
             string ImagenDataURL64 = "data:image/png;base64," + Convert.ToBase64String(ImagenOriginal);

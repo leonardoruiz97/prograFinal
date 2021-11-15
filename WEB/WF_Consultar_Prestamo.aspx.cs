@@ -19,41 +19,151 @@ public partial class WF_Consultar_Prestamo : System.Web.UI.Page
 {
     Prestamo pre = new Prestamo();
     N_Prestamo npre = new N_Prestamo();
+
+    N_Socio nsoci = new N_Socio();
+    Socio soci = new Socio();
+    DateTime fecha;
+
+    Estado_Prestamo estpre = new Estado_Prestamo ();
+    N_Estado_Prestamo nestpre = new N_Estado_Prestamo ();
     protected void Page_Load(object sender, EventArgs e)
     {
-        listarprestamo();
+        if (!IsPostBack)
+        {
+            listarprestamo();
+            listarCamposDdl();
+        }
+    }
+
+    public void listarCamposDdl()
+    {
+        ddlPrestamoxEstado.DataSource = nestpre.listarPrestamoxEstado();
+        ddlPrestamoxEstado.DataTextField = "VEPre_Estado_Prestamo";
+        ddlPrestamoxEstado.DataValueField = "PK_IEPre_Cod";
+        ddlPrestamoxEstado.DataBind();
+        ddlPrestamoxEstado.Items.Insert(0, "Seleccionar Opcion");
     }
 
     void listarprestamo()
     {
+
         gv_Tabla_Consuktar_Prestamo.DataSource = npre.ListarConsultarPrestamo();
         gv_Tabla_Consuktar_Prestamo.DataBind();
     }
 
+    void listarprestamoxFecha()
+    {
+        string fecha = Convert.ToDateTime(txtfecha.Text).ToString("yyyy/MM/dd");
+        pre.DPre_Fecha_Registro = Convert.ToDateTime(fecha);
+        gv_Tabla_Consuktar_Prestamo.DataSource = npre.ConsultarPrestamoxFecha(pre);
+        gv_Tabla_Consuktar_Prestamo.DataBind();
+    }
+    void listarxDni()
+    {
+        soci.IS_Dni = int.Parse(txtsocio.Text);
+        gv_Tabla_Consuktar_Prestamo.DataSource = npre.ConsultarPrestamoxDni(soci);
+        gv_Tabla_Consuktar_Prestamo.DataBind();
+    }
+
+    void listarxEstado()
+    {
+        int codigo = ddlPrestamoxEstado.SelectedIndex;
+        pre.FK_IEPre = Convert.ToInt32(codigo);
+        gv_Tabla_Consuktar_Prestamo.DataSource = npre.ConsultaEstadoDePrestamos(pre);
+        gv_Tabla_Consuktar_Prestamo.DataBind();
+
+    }
+        
+  
     protected void gv_Tabla_Consuktar_Prestamo_RowCommand(object sender, GridViewCommandEventArgs e)
     {
+        
 
     }
 
     protected void gv_Tabla_Consuktar_Prestamo_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {   
-        gv_Tabla_Consuktar_Prestamo.PageIndex = e.NewPageIndex;
-        listarprestamo();
+
+
+      
+            gv_Tabla_Consuktar_Prestamo.PageIndex = e.NewPageIndex;
+            listarprestamo();
+      
+    
+
+  
 
     }
 
     protected void gv_Tabla_Consuktar_Prestamo_DataBound(object sender, EventArgs e)
     {
-
+      
     }
 
     protected void gv_Tabla_Consuktar_Prestamo_RowDataBound(object sender, GridViewRowEventArgs e)
     {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            e.Row.Cells[1].Text = Convert.ToDateTime(e.Row.Cells[1].Text).ToString("dd/MM/yyyy");
+        }
 
+    
     }
 
     protected void txtFillter_TextChanged(object sender, EventArgs e)
     {
 
     }
+
+    protected void btnConsultarFecha_Click(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void btnBorrar_Click(object sender, EventArgs e)
+    {
+        txtsocio.Text = "";
+        txtfecha.Text = "";
+        ddlPrestamoxEstado.SelectedValue = "Seleccionar Opcion";
+        listarprestamo();
+    }
+
+    protected void btnBuscarSocio_Click(object sender, EventArgs e)
+    {
+        if (txtsocio.Text != "")
+        {
+            
+           
+            listarxDni();
+        }
+        else if(txtfecha.Text != "")
+
+        {
+
+            listarprestamoxFecha();
+          
+        }
+
+        
+        else
+        {
+            listarprestamo();
+        }
+
+   
+
+    }
+
+    protected void ddlPrestamoxEstado_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        listarxEstado();
+
+        if (ddlPrestamoxEstado.SelectedIndex ==0)
+        {
+            listarprestamo();
+        }
+    }
+
+
+ 
 }

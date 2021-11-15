@@ -61,6 +61,21 @@ namespace GestionDatos
             sqlc.Close();
             return 1;
         }
+
+        public int registrarMovimientoxDesembolso(Movimiento objmo)
+        {
+            cmd = new SqlCommand("sp_Registrar_MovimientoxDesembolso", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@DMove_Fecha_Registro", objmo.DMove_Fecha_Registro);
+            cmd.Parameters.AddWithValue("@FMove_Importe", objmo.FMove_Importe);
+            cmd.Parameters.AddWithValue("@VMove_Detalle", objmo.VMove_Detalle);
+            cmd.Parameters.AddWithValue("@FK_IS_Cod ", objmo.FK_IS_Cod);
+
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            sqlc.Close();
+            return 1;
+        }
         public DataTable listarMovimientoxSocio(Socio soci)
         {
             try
@@ -100,5 +115,7 @@ namespace GestionDatos
                 throw e;
             }
         }
+
+
     }
 }

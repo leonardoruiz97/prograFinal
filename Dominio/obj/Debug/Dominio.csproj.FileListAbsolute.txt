@@ -1,0 +1,6 @@
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\bin\Debug\Dominio.dll
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\bin\Debug\Dominio.pdb
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\obj\Debug\Dominio.dll
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\obj\Debug\Dominio.pdb
+D:\GIT PROYECTO SWGISC\prograFinal\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache

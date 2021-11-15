@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GD_Cuota.cs" />
+    <Compile Include="GD_Estado_Prestamo.cs" />
     <Compile Include="GD_Estado_Solicitud.cs" />
     <Compile Include="GD_Frecuencia.cs" />
     <Compile Include="GD_Movimiento.cs" />

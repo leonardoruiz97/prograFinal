@@ -521,12 +521,30 @@
                     timer: 2000
                 })
             }
+            function alertSexolVacio() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Seleccione su Sexo',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
 
             function alertFechaNacVacio() {
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
                     title: 'Ingrese Fecha de Nacimiento',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
+            function alertFechaNacMayor18() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Tiene que ser persona mayor a 18 años',
                     showConfirmButton: false,
                     timer: 2000
                 })
@@ -549,7 +567,7 @@
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
-                    title: 'Seleccione su Departamento',
+                    title: 'Seleccione su Lugar de Nacimiento',
                     showConfirmButton: false,
                     timer: 2000
                 })
@@ -625,6 +643,16 @@
                     text: 'Se Registro la Solicitud exitosamente, esperar credenciales en su bandeja de correo',
                     showConfirmButton: false,
                     timer: 4000
+                })
+            }
+
+            function alertErrorImagen() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Adjunte Archivo Solicitado',
+                    showConfirmButton: false,
+                    timer: 2000
                 })
             }
         </script>

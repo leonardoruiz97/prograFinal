@@ -45,56 +45,45 @@
 
      <section style="padding: 50px;"></section>
     <h3 style="text-align: center; color: black"><b>CONSULTAR PRESTAMO</b></h3>
+
     <asp:Label ID="txtCorreo" runat="server" Text="" Visible="false"></asp:Label>
 
-    <%--registro de socio--%>
-    <asp:Label ID="txtdni" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtdnisocio" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtnombrecompleto" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtApaterno" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtAmaterno" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtfechaNacimiento" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtfechaRegistro" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtFKsol" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtfksocio" runat="server" Text="" Visible="false"></asp:Label>
-    <asp:Label ID="txtcodSoliAceptada" runat="server" Text="" Visible="false"></asp:Label>
+    <div class="row">
+   <div class="col-sm-3" style="margin-left:80px">
+       <asp:Label ID="Label12" runat="server" Text="Fecha de Regristro"></asp:Label>
+       <asp:TextBox ID="txtfecha" runat="server" class="form-control" TextMode="Date" Width="50%"></asp:TextBox>
+   </div>
+   <div class="col-sm-3">
+       <asp:Label ID="Label4" runat="server" Text="Socio"></asp:Label>
+       <asp:TextBox ID="txtsocio" runat="server" class="form-control" Width="50%"></asp:TextBox>
+   </div>
+   <div class="col-sm-3"> 
+       <asp:Label ID="Label21" runat="server" Text="Estados"></asp:Label>
+       <asp:DropDownList ID="ddlPrestamoxEstado" runat="server" CssClass="form-control" Width="50%" OnSelectedIndexChanged="ddlPrestamoxEstado_SelectedIndexChanged" AutoPostBack="True">
+       <asp:ListItem Text="Seleccionar Opcion" Value="0" Selected="True"></asp:ListItem>
+                
+       </asp:DropDownList>
 
-    <script type="text/javascript">
-        function Search_Gridview(strKey) {
-            var strData = strKey.value.toLowerCase().split(" ");
-            var tblData = document.getElementById("<%=gv_Tabla_Consuktar_Prestamo.ClientID %>");
-            var rowData;
-            for (var i = 1; i < tblData.rows.length; i++) {
-                rowData = tblData.rows[i].innerHTML;
-                var styleDisplay = 'none';
-                for (var j = 0; j < strData.length; j++) {
-                    if (rowData.toLowerCase().indexOf(strData[j]) >= 0)
-                        styleDisplay = '';
-                    else {
-                        styleDisplay = 'none';
-                        break;
-                    }
-                }
-                tblData.rows[i].style.display = styleDisplay;
-            }
-        }
-    </script>
-
-
-  <div class="field" id="searchform">
-        <asp:TextBox placeholder="Ingresar elemento a buscar" ID="txtFillter" runat="server" AutoPostBack="true" onkeyup="Search_Gridview(this)" OnTextChanged="txtFillter_TextChanged" />
-        <button type="button" id="search">Buscar</button>
-    </div>
-
+   </div>
+   
+         
+        <div class="btn-group" role="group">
+             <asp:LinkButton ID="btnBuscarSocio" CssClass="btn btn-info" Width="" runat="server" OnClick="btnBuscarSocio_Click" Text="Enviar"> <span class="glyphicon glyphicon-search" aria-hidden="true"  style="color:white"></span> 
+          </asp:LinkButton>
+                            
+         <asp:LinkButton style="margin-left:50px" ID="btnBorrar" CssClass="btn btn-warning"  Width="" runat="server" OnClick="btnBorrar_Click" Text="Enviar"> <span class="glyphicon glyphicon-erase" aria-hidden="true" style="color:white"></span>
+          </asp:LinkButton>  
+  
+</div>
     <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
     <section style="padding: 20px;"></section>
      
          <div style="margin-left:50px">
-    <asp:GridView ID="gv_Tabla_Consuktar_Prestamo" runat="server" OnRowCommand="gv_Tabla_Consuktar_Prestamo_RowCommand" OnPageIndexChanging="gv_Tabla_Consuktar_Prestamo_PageIndexChanging" EmptyDataText="No hay Solicitudes aceptadas" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnDataBound="gv_Tabla_Consuktar_Prestamo_DataBound" OnRowDataBound="gv_Tabla_Consuktar_Prestamo_RowDataBound">
+    <asp:GridView ID="gv_Tabla_Consuktar_Prestamo" runat="server" OnRowCommand="gv_Tabla_Consuktar_Prestamo_RowCommand" OnPageIndexChanging="gv_Tabla_Consuktar_Prestamo_PageIndexChanging" EmptyDataText="No se encontraron datos" CssClass="table-responsive-sm table-hover" Width="95%" AutoGenerateColumns="False" GridLines="None" OnDataBound="gv_Tabla_Consuktar_Prestamo_DataBound" OnRowDataBound="gv_Tabla_Consuktar_Prestamo_RowDataBound">
         <Columns>
             <asp:BoundField DataField="PK_IPre_Cod" HeaderText="N° Prestamo" />
-            <asp:BoundField DataField="FechaRegistro" HeaderText="Fecha Registro" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
+            <asp:BoundField DataField="FechaRegistro" HeaderText="Fecha Registro" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
                 <ItemStyle CssClass="text-center"></ItemStyle>
@@ -125,6 +114,19 @@
 
                 <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
+
+            <asp:BoundField DataField="IS_Dni" HeaderText="DNI" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+                <HeaderStyle CssClass="text-center"></HeaderStyle>
+
+                <ItemStyle CssClass="text-center"></ItemStyle>
+            </asp:BoundField>
+
+            <asp:BoundField DataField="DatosSocio" HeaderText="Datos De Socio" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+                <HeaderStyle CssClass="text-center"></HeaderStyle>
+
+                <ItemStyle CssClass="text-center"></ItemStyle>
+            </asp:BoundField>
+
             <asp:BoundField DataField="EstadoDePrestamo" HeaderText="Estado Prestamo" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
 
@@ -136,5 +138,17 @@
       <HeaderStyle BackColor="#008080" ForeColor="white" Font-Bold="true" />
     </asp:GridView>
 </div>
+        <script src="js/sweetalert.js"></script>
+        <script>
+            function DNInoencontrado() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'No se Encontraron datos',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
+            </script>
 </asp:Content>
 

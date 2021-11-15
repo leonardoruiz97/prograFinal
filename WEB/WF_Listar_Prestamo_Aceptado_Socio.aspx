@@ -38,6 +38,7 @@
         <asp:Label ID="txtImportePrestamoAceptado" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="txtNumPrestamo" runat="server" Text="" Visible="false"></asp:Label>
           <asp:Label ID="txttcea" runat="server" Text="" Visible="false"></asp:Label>
+           <asp:Label ID="txttasamen" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="txtNumCuotas" runat="server" Text="" Visible="false"></asp:Label>
                   <asp:Label ID="txtFechaRegistro" runat="server" Text="" Visible="false"></asp:Label>
             <asp:Label ID="txtfechafin" runat="server" Text="" Visible="false"></asp:Label>

@@ -76,6 +76,18 @@ namespace GestionDatos
             sqlc.Close();
         }
 
+        public void ActualizarEstadoCuotaPenalizada(Cuota cuo)
+        {
+            cmd = new SqlCommand("Sp_ActualizarEstadoCuotaPenalizada", sqlc);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@PK_IC_Cod", cuo.PK_IC_Cod);
+
+            sqlc.Open();
+            cmd.ExecuteNonQuery();
+            sqlc.Close();
+        }
+
         public void ConsultarImporteAPagarxCuota(Cuota cuo)
         {
             cmd = new SqlCommand("Sp_ConsultarImporteAPagarxCuota", sqlc);

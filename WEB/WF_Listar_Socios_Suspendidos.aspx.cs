@@ -259,7 +259,7 @@ public partial class WF_Listar_Socios_Suspendidos : System.Web.UI.Page
 
             pdfDoc.Add(new Phrase("\n", FontB8));
 
-            pdfDoc.Add(new Paragraph(12, "                         LISTADO DE SOCIOS SUSPENDIDOS", FontB16));
+            pdfDoc.Add(new Paragraph(12, "                                          REPORTE DE DEUDORES", FontB16));
        
             pdfDoc.Add(new Phrase("\n", FontB8));
       
@@ -267,13 +267,15 @@ public partial class WF_Listar_Socios_Suspendidos : System.Web.UI.Page
             #region Tabla4-Detalles
             PdfPTable Table4 = new PdfPTable(GridView2.HeaderRow.Cells.Count);
          
-            Table4.WidthPercentage = 95;
+            Table4.WidthPercentage = 90;
        
             foreach (TableCell headerCell in GridView2.HeaderRow.Cells)
             {
                 
                 PdfPCell pdfCell = new PdfPCell(new Phrase(headerCell.Text));
                 pdfCell.BackgroundColor = new iTextSharp.text.BaseColor(93,173,226);
+               
+
                 Table4.AddCell(pdfCell);
             }
 
