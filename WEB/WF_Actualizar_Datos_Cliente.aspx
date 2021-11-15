@@ -7,6 +7,13 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script>
+        function SoloNumeros(e) {
+            var key_press = document.all ? key_press = e.keyCode : key_press = e.which;
+            return ((key_press > 47 && key_press < 58 || key_press == 110));
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -131,7 +138,7 @@
                                          <div class="form-group">
                                             <asp:Label ID="Label1" runat="server" Text="Telefono Fijo"></asp:Label>
                                             <section style="padding: 0px;"></section>
-                                            <asp:TextBox ID="txttelefono" runat="server" class="form-control" Width="130%"></asp:TextBox>
+                                            <asp:TextBox ID="txttelefono" runat="server" onkeypress="javascript:return SoloNumeros(event)" minlength="7" MaxLength="7" class="form-control" Width="130%"></asp:TextBox>
                                         </div>
 
                                         <div class="form-group">
@@ -193,6 +200,36 @@
                         position: 'center',
                         icon: 'error',
                         title: 'Incorrecto el formato del Numero',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+
+                function TelefonoVacio() {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Incorrecto el formato de Telefono Fijo',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+
+                function DireccionVacio() {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Ingrese su Direccion',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+
+                function EmailVacio() {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Ingrese su Correo',
                         showConfirmButton: false,
                         timer: 2000
                     })

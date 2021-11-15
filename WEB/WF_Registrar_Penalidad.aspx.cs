@@ -166,7 +166,7 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
     protected void btnPenalidad_Click(object sender, EventArgs e)
     {
         registrarPenalidad();
-        updateEstadoCuota();
+       // updateEstadoCuota();
 
 
     }

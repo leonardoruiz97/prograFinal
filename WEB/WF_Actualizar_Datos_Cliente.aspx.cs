@@ -111,6 +111,42 @@ public partial class WF_Actualizar_Datos_Cliente : System.Web.UI.Page
 
     protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
     {
+        
+
+        if (txtdirreccion.Text == "")
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "DireccionVacio()", true);
+            return;
+        }
+
+        if (txtcelular.Text == "")
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "celularVacio()", true);
+            return;
+        }
+
+        if (txttelefono.Text == "")
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "TelefonoVacio()", true);
+            return;
+
+        }
+
+
+        if (txtemail.Text == "")
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "EmailVacio()", true);
+            return;
+        }
+
+        
+
+            
+
+
+
+
+
         sol.PK_ISol_Cod = int.Parse(txtsolicitud.Text);
         sol.VSol_Direccion = txtdirreccion.Text;
         sol.VSol_Correo = txtemail.Text;
