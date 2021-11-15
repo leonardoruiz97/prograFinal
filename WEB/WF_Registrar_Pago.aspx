@@ -205,6 +205,10 @@
 													<HeaderStyle CssClass="text-center"></HeaderStyle>
 													<ItemStyle CssClass="text-center"></ItemStyle>
 												</asp:BoundField>
+												<asp:BoundField DataField="FK_IECU_Cod" HeaderText="FK_IECU_Cod" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" >
+													<HeaderStyle CssClass="text-center"></HeaderStyle>
+													<ItemStyle CssClass="text-center"></ItemStyle>
+												</asp:BoundField>
 												<asp:BoundField DataField="VEcu_Estado_Cuota" HeaderText="Estado Cuota" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" >
 													<HeaderStyle CssClass="text-center"></HeaderStyle>
 													<ItemStyle CssClass="text-center"></ItemStyle>

@@ -132,22 +132,24 @@ public partial class WF_Gestionar_Prestamos : System.Web.UI.Page
 
     protected void gv_ListarCuotas_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName.Contains("Registrar")) 
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow row = gv_ListarCuotas.Rows[index];
+        int index = Convert.ToInt32(e.CommandArgument);
+        GridViewRow row = gv_ListarCuotas.Rows[index];
 
-            Label PK_IC_Cod = (Label)row.FindControl("PK_IC_Cod");
+        Label PK_IC_Cod = (Label)row.FindControl("PK_IC_Cod");
+
+        if (e.CommandName.Contains("Registrar")) 
+        {           
             pag.VPago_Mes = gv_ListarCuotas.Rows[index].Cells[0].Text;
             pag.FPago_Monto = Convert.ToDouble(gv_ListarCuotas.Rows[index].Cells[4].Text);
             pag.FK_IC_Cod = Convert.ToInt32(PK_IC_Cod.Text);
             cuo.PK_IC_Cod = Convert.ToInt32(PK_IC_Cod.Text);
             mov.FMove_Importe = Convert.ToDouble(gv_ListarCuotas.Rows[index].Cells[4].Text);
             mov.FK_IS_Cod = Convert.ToInt32(txtFK_IS_Cod.Text);
+            cuo.FK_IECU_Cod = Convert.ToInt32(gv_ListarCuotas.Rows[index].Cells[6].Text);
 
-            Npag.RegistrarPagoxCuota(pag);
-            Ncuo.ActualizarEstadoCuota(cuo);
-            Nmov.RegistrarMovimientoxCuotaPagada(mov);
+            Npag.RegistrarPagoxCuota(pag, cuo);            
+            Nmov.RegistrarMovimientoxCuotaPagada(mov, cuo);
+            //Ncuo.ActualizarEstadoCuota(cuo);
             if (Convert.ToInt32(txtNumCuotas.Text) == Convert.ToInt32(gv_ListarCuotas.Rows[index].Cells[1].Text))
             {
                 pre.PK_IPre_Cod = Convert.ToInt32(txtCodPrestamo.Text);
@@ -160,13 +162,14 @@ public partial class WF_Gestionar_Prestamos : System.Web.UI.Page
         }
         else if (e.CommandName.Contains("Penalizar"))
         {
-            int index = Convert.ToInt32(e.CommandArgument);
+            //int index = Convert.ToInt32(e.CommandArgument);
             txtNCuota.Text = gv_ListarCuotas.Rows[index].Cells[1].Text;            
             txtFechaFin.Text = gv_ListarCuotas.Rows[index].Cells[3].Text;
             txtImporte.Text = gv_ListarCuotas.Rows[index].Cells[4].Text;
             txtDiasRetraso.Text = gv_ListarCuotas.Rows[index].Cells[5].Text;
-            txtIECU_Cod.Text = gv_ListarCuotas.Rows[index].Cells[6].Text;            
-
+            txtIECU_Cod.Text = gv_ListarCuotas.Rows[index].Cells[7].Text;
+                    
+            Session["pkcuo"] = Convert.ToInt32(PK_IC_Cod.Text);
             Session["pre"] = "" + txtCodPrestamo.Text;
             Session["cuo"] = "" + txtNCuota.Text;
             Session["dni"] = "" + txtNumeroDocumento.Text;
@@ -192,36 +195,36 @@ public partial class WF_Gestionar_Prestamos : System.Web.UI.Page
             string estado = DataBinder.Eval(e.Row.DataItem, "VEcu_Estado_Cuota").ToString();
             if (estado == "Moroso")
             {
-                e.Row.Cells[6].BackColor = System.Drawing.Color.LightCoral;
-                e.Row.Cells[6].ForeColor = System.Drawing.Color.White;
-                e.Row.Cells[6].Height = 4;
-                e.Row.Cells[6].Width = 80;
+                e.Row.Cells[7].BackColor = System.Drawing.Color.LightCoral;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.White;
+                e.Row.Cells[7].Height = 4;
+                e.Row.Cells[7].Width = 80;
                 e.Row.FindControl("btnRegistrarPago").Visible = false;
                 e.Row.FindControl("btnPenalizacion").Visible = true;
             }
             else if (estado == "En Curso")
             {
-                e.Row.Cells[6].BackColor = System.Drawing.Color.LightBlue;
-                e.Row.Cells[6].ForeColor = System.Drawing.Color.White;
-                e.Row.Cells[6].Height = 4;
-                e.Row.Cells[6].Width = 80;
+                e.Row.Cells[7].BackColor = System.Drawing.Color.LightBlue;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.White;
+                e.Row.Cells[7].Height = 4;
+                e.Row.Cells[7].Width = 80;
                 e.Row.FindControl("btnRegistrarPago").Visible = true;
                 e.Row.FindControl("btnPenalizacion").Visible = false;
             }
             else if (estado == "Pagado")
             {
-                e.Row.Cells[6].BackColor = System.Drawing.Color.LightGreen;
-                e.Row.Cells[6].ForeColor = System.Drawing.Color.White;
-                e.Row.Cells[6].Height = 4;
-                e.Row.Cells[6].Width = 80;
-                e.Row.Cells[7].Enabled = false;
+                e.Row.Cells[7].BackColor = System.Drawing.Color.LightGreen;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.White;
+                e.Row.Cells[7].Height = 4;
+                e.Row.Cells[7].Width = 80;
+                e.Row.Cells[8].Enabled = false;
             }
             else if (estado == "Penalizado") 
             {
-                e.Row.Cells[6].BackColor = System.Drawing.Color.LightGoldenrodYellow;
-                e.Row.Cells[6].ForeColor = System.Drawing.Color.White;
-                e.Row.Cells[6].Height = 4;
-                e.Row.Cells[6].Width = 80;
+                e.Row.Cells[7].BackColor = System.Drawing.Color.LightGoldenrodYellow;
+                e.Row.Cells[7].ForeColor = System.Drawing.Color.White;
+                e.Row.Cells[7].Height = 4;
+                e.Row.Cells[7].Width = 80;
             }
         }
     }

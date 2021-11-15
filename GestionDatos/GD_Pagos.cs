@@ -44,7 +44,7 @@ namespace GestionDatos
             }
         }
 
-        public int registrarPagoxCuota(Pago objpag)
+        public int registrarPagoxCuota(Pago objpag, Cuota objCuo)
         {
             cmd = new SqlCommand("Sp_RegistrarPagoxCuota", sqlc);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -52,6 +52,7 @@ namespace GestionDatos
             cmd.Parameters.AddWithValue("@VPago_Mes", objpag.VPago_Mes);
             cmd.Parameters.AddWithValue("@FPago_Monto", objpag.FPago_Monto);
             cmd.Parameters.AddWithValue("@FK_IC_Cod", objpag.FK_IC_Cod);
+            cmd.Parameters.AddWithValue("@FK_IECU_Cod", objCuo.FK_IECU_Cod);
 
             sqlc.Open();
             cmd.ExecuteNonQuery();
