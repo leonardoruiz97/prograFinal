@@ -271,7 +271,7 @@
 							</div>
 							</div>
 								<section style="padding: 10px;"></section>
-								<div class="row datosRiesgo-Cliente" data-select2-id="46">
+								<div class="row datosRiesgo-Cliente" data-select2-id="46" style="margin-left:-10px;">
 									<div class="hidden-xs col-sm-1 col-md-1 imagen-formulario">
 										<i class="fas fa-briefcase fa-3x" style="color:deepskyblue" aria-hidden="true" ></i> 
 										
@@ -284,7 +284,7 @@
 												</div>
 
 											<div class="row">
-												<div class="col-sm-6 col-md-6 margin-bottom-20">			
+												<div class="col-sm-6 col-md-6 margin-bottom-20" style="margin-right:-10px;">			
 													<div class="container-select2">
 														<label class="select2__label">Profesión</label> 
 														<br />
@@ -310,7 +310,7 @@
 												
 										
 											<div class="row">
-												<div class="col-sm-6 col-md-6 margin-top-20" style="padding-bottom: 5px !important;" data-select2-id="178">
+												<div class="col-sm-6 col-md-6 margin-top-20" style="padding-bottom: 5px !important; margin-right:-8px;"" data-select2-id="178">
 													<div class="container-select2" data-select2-id="177">
 														<label class="select2__label">Situación laboral</label>
 														<asp:DropDownList ID="ddlsituacionlaboral" runat="server" CssClass="form-control" Width="66%">
