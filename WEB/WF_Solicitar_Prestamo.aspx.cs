@@ -519,7 +519,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
         }
 
 
-        if (FileUpReciboLuz != null && FileUpload6.HasFile)
+        if (FileUpReciboLuz != null && FileUpReciboLuz.HasFile)
         {
 
             int tamanio = FileUpReciboLuz.PostedFile.ContentLength;
@@ -540,7 +540,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             return;
 
         }
-        if (FileUpload1 != null && FileUpload6.HasFile)
+        if (FileUpload1 != null && FileUpload1.HasFile)
         {
 
             int tamanio = FileUpload1.PostedFile.ContentLength;

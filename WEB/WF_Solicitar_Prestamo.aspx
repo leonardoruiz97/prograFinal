@@ -152,7 +152,7 @@
 												</div>
 											
 												<div class="col-sm-6 col-md-6 margin-bottom-20"">
-													<div class="container-select2" style="margin-left:50px">
+													<div class="container-select2" style="margin-left:40px">
 														<label class="select2__label">TCEA de Operacion</label>
 														<br />
 														<asp:TextBox ID="txttasaanual" runat="server" class="form-control" Width="90%" Enabled="false"></asp:TextBox>
@@ -180,17 +180,17 @@
 												<div class="col-sm-6 col-md-6 margin-bottom-20">			
 													<div class="container-select2">
 														<label class="select2__label">Sexo</label> 
-															<section style="padding: 1px;"></section>
-															<asp:TextBox ID="txtSexo" runat="server" class="form-control" Width="80%" Enabled="false"></asp:TextBox>
+															<section style="padding:"></section>
+															<asp:TextBox ID="txtSexo" runat="server" class="form-control" Width="90%" Enabled="false"></asp:TextBox>
 														
 													</div>
 												</div>
 											
-												<div class="col-sm-6 col-md-6 margin-bottom-20" style="margin-left:70px;">
+												<div class="col-sm-6 col-md-6 margin-bottom-20" style="margin-left:40px;">
 													<div class="container-select2">
 														<label class="select2__label">Estado Civil</label> 
 														<section style="padding: 1px;"></section>
-															<asp:TextBox ID="txtEstadoCivil" runat="server" class="form-control" Width="80%" Enabled="false"></asp:TextBox>
+															<asp:TextBox ID="txtEstadoCivil" runat="server" class="form-control" Width="90%" Enabled="false"></asp:TextBox>
 													</div>
 												</div>
 											</div>
@@ -228,7 +228,7 @@
 															de residencia</label> 
 														<br />
 													<section style="padding: 1px;"></section>
-															<asp:TextBox ID="txtDistrito" runat="server" class="form-control" Width="80%" Enabled="false"></asp:TextBox>
+															<asp:TextBox ID="txtDistrito" runat="server" class="form-control" Width="90%" Enabled="false"></asp:TextBox>
 														
 														
 													</div>
@@ -431,7 +431,7 @@
 													<div class="container-select2">
 														<label class="select2__label">Trabajo</label> 
 														<section style="padding: 1px;"></section>
-															<asp:TextBox ID="txtTrabajo" runat="server" class="form-control" Width="80%" Enabled="false"></asp:TextBox>
+															<asp:TextBox ID="txtTrabajo" runat="server" class="form-control" Width="120%" Enabled="false"></asp:TextBox>
 													</div>
 												</div>
 											
@@ -453,7 +453,7 @@
 													
 											      <asp:TextBox ID="txtingresos" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
-												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-120px;margin-top:10px">
+												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-100px;margin-top:10px">
 													<label class="mdl-textfield__label" for="MR">Ingresos variables
 															(mensuales) </label>
 														
@@ -496,7 +496,7 @@
 													<label class="mdl-textfield__label" for="MR"> Egresos variables
 															(mensuales) </label>
 														
-													<asp:TextBox ID="TextBox2" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="55%"></asp:TextBox>
+													<asp:TextBox ID="TextBox2" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
 											</div>
 											
