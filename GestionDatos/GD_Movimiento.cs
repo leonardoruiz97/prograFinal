@@ -19,13 +19,15 @@ namespace GestionDatos
         {
             sqlc = new SqlConnection(GD_ConexionBD.CadenaConexion);
         }
-        public int registrarMovimientoxCuotaPagada(Movimiento objMov)
+        public int registrarMovimientoxCuotaPagada(Movimiento objMov, Cuota objCuo)
         {
             cmd = new SqlCommand("Sp_RegistrarMovimientoxCuotaPagada", sqlc);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@FMove_Importe", objMov.FMove_Importe);
             cmd.Parameters.AddWithValue("@FK_IS_Cod", objMov.FK_IS_Cod);
+            cmd.Parameters.AddWithValue("@FK_IC_Cod", objCuo.PK_IC_Cod);
+            cmd.Parameters.AddWithValue("@FK_IECU_Cod", objCuo.FK_IECU_Cod);
 
             sqlc.Open();
             cmd.ExecuteNonQuery();
