@@ -14,6 +14,7 @@ public partial class WF_Registrar_Ahorros : System.Web.UI.Page
     N_Socio Nsoc = new N_Socio();
     Movimiento movi = new Movimiento();
     N_Movimiento Nmovi = new N_Movimiento();
+    double montocuota = 0;
 
     double total = 0;
     double monto = 0;
@@ -64,7 +65,10 @@ public partial class WF_Registrar_Ahorros : System.Web.UI.Page
 
     protected void btnBorrar_Click(object sender, EventArgs e)
     {
-
+        txtsocio.Text = "";
+        txtnombres.Text = "";
+        txtapellido.Text = "";
+        PanelHistorial.Visible = false;
     }
 
     protected void btnGrabar_Click(object sender, EventArgs e)
@@ -85,17 +89,28 @@ public partial class WF_Registrar_Ahorros : System.Web.UI.Page
 
     protected void gv_Tabla_Lista_Movimientos_RowDataBound(object sender, GridViewRowEventArgs e)
     {
+       
 
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
         
             total = total + Convert.ToDouble(e.Row.Cells[4].Text);
             string tipo = e.Row.Cells[2].Text;
-            if (tipo == "DEPOSITO APORTACION") //&& tipo =="DESEMBOLSO"
+       
+            if (tipo == "AMORTIZACION DE CUOTA" ) //&& tipo =="DESEMBOLSO"
             {
-                 monto = monto + Convert.ToDouble(e.Row.Cells[4].Text);
-                txtsaldodisponible.Text = Convert.ToString(monto);
+                 monto +=Convert.ToDouble(e.Row.Cells[4].Text);
+              
             }
+
+            if (tipo == "APORTE/APOYO/SEPELIO")
+            {
+                montocuota += Convert.ToDouble(e.Row.Cells[4].Text);
+                
+            }
+
+            txtsaldodisponible.Text = Convert.ToString(total - (monto + montocuota));
+            txtsaldoactual.Text = Convert.ToString(total - monto);
 
             int valor = Convert.ToInt32(this.gv_Tabla_Lista_Movimientos.Rows.Count) + 1;
             txtmovimiento.Text = valor.ToString();
@@ -105,8 +120,7 @@ public partial class WF_Registrar_Ahorros : System.Web.UI.Page
         {
             e.Row.Cells[3].Text = total.ToString();
         }
-
-        txtsaldoactual.Text = Convert.ToString(total);
+    
     }
 
     protected void gv_Tabla_Lista_Movimientos_RowCommand(object sender, GridViewCommandEventArgs e)

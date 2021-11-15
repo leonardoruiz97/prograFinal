@@ -123,10 +123,10 @@
         </asp:GridView>
 
 
-        <asp:GridView ID="GridView2" runat="server" OnRowCommand="GridView2_RowCommand" Visible="false" OnPageIndexChanging="GridView2_PageIndexChanging" EmptyDataText="No hay Socios suspendidos" CssClass="table table-striped table-hover" Width="90%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="GridView2_RowDataBound">
+        <asp:GridView ID="GridView2" runat="server" OnRowCommand="GridView2_RowCommand" Visible="false" OnPageIndexChanging="GridView2_PageIndexChanging" EmptyDataText="No hay Socios suspendidos" CssClass="table table-striped table-hover" Width="60%" AutoGenerateColumns="False" GridLines="None" OnRowDataBound="GridView2_RowDataBound">
             <Columns>
                 <asp:BoundField DataField="PK_IS_Cod" HeaderText="Nro" />
-                <asp:BoundField DataField="IS_Dni" HeaderText="DNI" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
+                <asp:BoundField DataField="IS_Dni" HeaderText="DNI"  ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center" DataFormatString="{0:d}">
                     <HeaderStyle CssClass="text-center"></HeaderStyle>
 
                     <ItemStyle CssClass="text-center"></ItemStyle>
@@ -137,12 +137,12 @@
 
                     <ItemStyle CssClass="text-center"></ItemStyle>
                 </asp:BoundField>
-                  <asp:BoundField DataField="VS_Apellido_Paterno" HeaderText="Nombre Completo" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+                  <asp:BoundField DataField="VS_Apellido_Paterno" HeaderText="Apellido Materno" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                     <HeaderStyle CssClass="text-center"></HeaderStyle>
 
                     <ItemStyle CssClass="text-center"></ItemStyle>
                 </asp:BoundField>
-                  <asp:BoundField DataField="VS_Apellido_Materno" HeaderText="Nombre Completo" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
+                  <asp:BoundField DataField="VS_Apellido_Materno" HeaderText="Apellido Paterno" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                     <HeaderStyle CssClass="text-center"></HeaderStyle>
 
                     <ItemStyle CssClass="text-center"></ItemStyle>

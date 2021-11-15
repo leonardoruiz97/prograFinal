@@ -149,35 +149,43 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertAmaVacio()", true);
             return;
         }
-        if (ddlEstadoCivil.SelectedValue== "")
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertEstadoCivilVacio()", true);
-            return;
-        }
+      
 
         if (txtfechaNacimiento.Text == "")
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertFechaNacVacio()", true);
             return;
         }
-        
+        validarFechaNacimiento();
+
+        if (ddlEstadoCivil.SelectedIndex == 0)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertEstadoCivilVacio()", true);
+            return;
+        }
+        if (ddlSexo.SelectedIndex == 0)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertSexolVacio()", true);
+            return;
+        }
+        if (ddlLugarNacimiento.SelectedIndex == 0)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertDepartamentoVacio()", true);
+            return;
+        }
+        if (ddlProvincia.SelectedIndex==0)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertProvinciaVacio()", true);
+            return;
+        }
 
         if (txtDireccion.Text == "")
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertDireccionVacio()", true);
             return;
         }
-        if (ddlLugarNacimiento.SelectedValue == "")
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertDepartamentoVacio()", true);
-            return;
-        }
-        if (ddlProvincia.SelectedValue == "")
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertProvinciaVacio()", true);
-            return;
-        }
-        if (ddlDistrito.SelectedValue == "")
+   
+        if (ddlDistrito.SelectedIndex==0)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertDistritoVacio()", true);
             return;
@@ -197,31 +205,40 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertTelefonoVacio()", true);
             return;
         }
-        if (ddlOcupacion.SelectedValue== "")
+        if (ddlOcupacion.SelectedIndex==0)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertOcupacionVacio()", true);
             return;
         }
         registrarSolicitud();
         validarAfiliacionPatrocinador();
-        deshabilitarCampos();
+       
 
 
 
     }
 
+    void validarFechaNacimiento()
+    {
+        DateTime aa = Convert.ToDateTime(txtfechaNacimiento.Text);
+        if(aa.AddYears(18) > DateTime.Today)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertFechaNacMayor18()", true);
+        }
+    }
+
     void deshabilitarCampos()
     {
-        txtDni.Enabled = false;
-        txtNombre.Enabled = false;
-        txtApaterno.Enabled = false;
-        txtAmaterno.Enabled = false;
-        txtfechaNacimiento.Enabled = false;
-        txtFechaRegistro.Enabled = false;
-        txtDireccion.Enabled = false;
-        txtCorreo.Enabled = false;
-        txtCelular.Enabled = false;
-        txtTelfijo.Enabled = false;
+        txtDni.ReadOnly = true;
+        txtNombre.ReadOnly = true;
+        txtApaterno.ReadOnly = true;
+        txtAmaterno.ReadOnly = true;
+        txtfechaNacimiento.ReadOnly = true;
+        txtFechaRegistro.ReadOnly = true;
+        txtDireccion.ReadOnly = true;
+        txtCorreo.ReadOnly = true;
+        txtCelular.ReadOnly = true;
+        txtTelfijo.ReadOnly = true;
         FileUpReciboLuz.Enabled = false;
         FileUpReciboAgua.Enabled = false;
         FileUpVivienda.Enabled = false;
@@ -252,7 +269,8 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
         soli.ISol_Celular = int.Parse(txtCelular.Text);
         soli.ISol_Telefono_Fijo = int.Parse(txtTelfijo.Text);
         soli.DepartamentoResidencia = "Lima";
-        if(FileUpReciboLuz != null)
+
+        if(FileUpReciboLuz != null && FileUpReciboLuz.HasFile)
         {
 
             int tamanio = FileUpReciboLuz.PostedFile.ContentLength;
@@ -265,7 +283,16 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             soli.IMSol_Recibo_Luz = ImagenOriginal;
 
         }
-       if (FileUpReciboAgua != null)
+        else
+        {
+            
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpReciboAgua != null && FileUpReciboAgua.HasFile)
         {
             int tamanio = FileUpReciboAgua.PostedFile.ContentLength;
             byte[] ImagenOriginal = new byte[tamanio];
@@ -277,7 +304,15 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             soli.IMSol_Recibo_agua = ImagenOriginal;
 
         }
-       if (FileUpVivienda != null)
+        else
+        {
+
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+        if (FileUpVivienda != null && FileUpVivienda.HasFile)
         {
             int tamanio = FileUpVivienda.PostedFile.ContentLength;
             byte[] ImagenOriginal = new byte[tamanio];
@@ -289,8 +324,16 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
             soli.IMSol_Imagen_Vivienda = ImagenOriginal;
 
         }
+        else
+        {
 
-        if (FileUpConstancia != null)
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
+
+        }
+
+        if (FileUpConstancia != null && FileUpConstancia.HasFile)
         {
             int tamanio = FileUpConstancia.PostedFile.ContentLength;
             byte[] ImagenOriginal = new byte[tamanio];
@@ -300,6 +343,14 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
 
             string ImagenDataURL64 = "data:image/png;base64," + Convert.ToBase64String(ImagenOriginal);
             soli.IMSol_Constancia = ImagenOriginal;
+
+        }
+        else
+        {
+
+
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "alertErrorImagen()", true);
+            return;
 
         }
 
@@ -314,7 +365,7 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
         ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "RegistrarSolicitud()", true);
        
         Nsoli.RegistrarSolicitud(soli);
-     
+        deshabilitarCampos();
 
     }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +12,14 @@ namespace Negocio
 {
     public class N_Movimiento
     {
+
         GD_Movimiento objMov;
 
         public N_Movimiento() 
         {
             objMov = new GD_Movimiento();
         }
+
 
         public int RegistrarMovimientoxCuotaPagada(Movimiento mov, Cuota cuo)
         {
@@ -41,6 +43,14 @@ namespace Negocio
         public DataTable listarMovimiento()
         {
             return objMov.listarMovimiento();
+
         }
+
+        public int RegistrarMovimientoxDesembolso(Movimiento mo)
+        {
+            return objMov.registrarMovimientoxDesembolso(mo);
+        }
+
+
     }
 }

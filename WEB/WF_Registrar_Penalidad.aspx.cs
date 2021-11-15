@@ -22,6 +22,7 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
     Cuota cuo = new Cuota();
     N_Cuota Ncuota = new N_Cuota();
 
+
     Penalidad pe = new Penalidad();
     N_Penalidad Npena = new N_Penalidad();
 
@@ -39,7 +40,7 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            if (Session["pkcuo"] == null && Session["pre"] == null && Session["cuo"] == null && Session["dni"] == null && Session["fechafin"] == null && Session["estacuota"] == null && Session["retra"] == null && Session["importe"] == null)
+            if (Session["pre"] == null && Session["cuo"] == null && Session["dni"] == null && Session["fechafin"] == null && Session["estacuota"] == null && Session["retra"] == null && Session["importe"] == null)
             {
                 Response.Redirect("WF_Lista_Registrar_Penalidad.aspx");
             }
@@ -151,12 +152,21 @@ public partial class WF_Registrar_Penalidad : System.Web.UI.Page
         pe.FK_IC_Cod = int.Parse(txtpkcuota.Text);
         ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "RegistrarPenalidad()", true);
         Npena.registrarPenalidad(pe);
-        Console.WriteLine(txtobservacion.Text);
+        
+    }
+
+    void updateEstadoCuota()
+    {
+        ///*actulizar estado cuota a penalizado*/
+        ///
+        cuo.PK_IC_Cod= int.Parse(txtnumcuota.Text);
+        Ncuota.ActualizarEstadoCuotaPenalizada(cuo);
     }
 
     protected void btnPenalidad_Click(object sender, EventArgs e)
     {
         registrarPenalidad();
+        updateEstadoCuota();
 
 
     }

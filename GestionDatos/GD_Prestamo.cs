@@ -634,6 +634,73 @@ namespace GestionDatos
             }
         }
 
+        public DataTable ConsultarPrestamoxFecha(Prestamo objpre)
+        {
+            try
+            {
+
+                cmd = new SqlCommand("Sp_ConsultarFecha", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@FechaRegistro", objpre.DPre_Fecha_Registro);
+
+
+
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public DataTable ConsultaEstadoDePrestamos(Prestamo objpre)
+        {
+            try
+            {
+
+                cmd = new SqlCommand("Sp_ConsultaEstadoDePrestamos", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IEPre", objpre.FK_IEPre);
+
+
+
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public DataTable ConsultarPrestamoxDni(Socio objsoci)
+        {
+            try
+            {
+
+
+                cmd = new SqlCommand("Sp_ConsultarPrestamoxDni", sqlc);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Dni", objsoci.IS_Dni);
+
+                dat = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                dat.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }
 

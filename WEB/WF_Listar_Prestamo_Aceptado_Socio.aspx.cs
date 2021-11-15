@@ -31,6 +31,9 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
 
     Prestamo pre = new Prestamo();
     N_Prestamo Npre = new N_Prestamo();
+
+    Movimiento move = new Movimiento();
+    N_Movimiento nMove = new N_Movimiento();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -41,8 +44,14 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             soci.IS_Dni = Convert.ToInt32(txtCodPatrocinador.Text);
             Nso.BuscarSocioxdni(soci);
             txtCodSocio.Text = "" + soci.PK_IS_Cod;
+
+            Nso.BuscarSocio(soci);
+            txtNomSocioprestamoAceptada.Text = soci.VS_Nombre_Completo + ' ' + soci.VS_Apellido_Paterno + ' ' + soci.VS_Apellido_Materno; ;
+           
+
             listarprestamoaceptadosocio();
 
+            
 
 
         }
@@ -102,9 +111,10 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             txtRangoFecha.Text = fechaInicio.ToString("dd/MM/yyyy") + " " + "hasta" + " " + fechaExpiracion.ToString("dd/MM/yyyy");
             txtfechafin.Text = fechaExpiracion.ToString("dd/MM/yyyy");
             txttcea.Text = tcea;
+            txttasamen.Text = tasamen;
 
             calcular();
-  
+            llenarTablaMovimiento();
 
             ///*actulizar estado*/
             //pre.PK_IPre_Cod = int.Parse(txtNumPrestamo.Text);
@@ -120,13 +130,22 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
         }
     }
 
+    void llenarTablaMovimiento()
+    {
+        move.DMove_Fecha_Registro = Convert.ToDateTime(txtFechaRegistro.Text);
+        move.FMove_Importe = double.Parse(txtImportePrestamoAceptado.Text);
+        move.VMove_Detalle = "Se registró el movimiento con el tipo desembolso";
+        move.FK_IS_Cod = int.Parse(txtCodSocio.Text);
+        nMove.RegistrarMovimientoxDesembolso(move);
+    }
+
 
 
     public void calcular()
     {
         double strMonto = double.Parse(txtImportePrestamoAceptado.Text);
         int meses = int.Parse(txtNumCuotas.Text);
-        double InterecAnual = Convert.ToDouble(txtNumCuotas.Text);
+        double InterecAnual = Convert.ToDouble(txttasamen.Text);
         double tasaPorcentual = InterecAnual / 100;
         double potenciaNumero = (1 + tasaPorcentual);
         double potenciaVariable = Math.Pow(potenciaNumero, -meses);
@@ -209,9 +228,10 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
 
     DataTable MakeDataTable()
     {
+        string fechapago = DateTime.Now.AddDays(5).ToString();
         double strMonto = double.Parse(txtImportePrestamoAceptado.Text);
         int meses = int.Parse(txtNumCuotas.Text);
-        double InterecAnual = Convert.ToDouble(txttcea.Text);
+        double InterecAnual = Convert.ToDouble(txttasamen.Text);
         double tasaPorcentual = InterecAnual / 100;
         double potenciaNumero = (1 + tasaPorcentual);
         double potenciaVariable = Math.Pow(potenciaNumero, -meses);
@@ -250,7 +270,7 @@ public partial class WF_Listar_Prestamo_Aceptado_Socio : System.Web.UI.Page
             {
                 SALDORESTANTE = 0;
             }
-            DateTime FFecha = Convert.ToDateTime(txtFechaRegistro.Text);
+            DateTime FFecha = Convert.ToDateTime(fechapago);
             FFecha = FFecha.AddMonths(I);
 
 

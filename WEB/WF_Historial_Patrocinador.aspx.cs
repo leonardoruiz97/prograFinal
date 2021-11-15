@@ -59,7 +59,7 @@ public partial class WF_Historial_Patrocinador : System.Web.UI.Page
 
         }
 
-        mostrarDatosEnabled();
+    
 
     }
 

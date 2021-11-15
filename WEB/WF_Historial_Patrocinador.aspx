@@ -60,19 +60,19 @@
                             <div class="form-group">
                                 <asp:Label ID="Label2" runat="server" Text="Documento de Identidad"></asp:Label>
                                 <br />
-                                <asp:TextBox ID="txtDni" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                <asp:TextBox ID="txtDni" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                             </div>
                             
                            <div class="form-group">
                                <asp:Label ID="Label7" runat="server" Text="Apellido Paterno"></asp:Label>
                                <br />
-                               <asp:TextBox ID="txtapellidopaterno" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                               <asp:TextBox ID="txtapellidopaterno" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                           </div>
 
                           <div class="form-group">
                                <asp:Label ID="Label10" runat="server" Text="Nº Vigencia (años)"></asp:Label>
                               <br />
-                               <asp:TextBox ID="txtVigencia" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                               <asp:TextBox ID="txtVigencia" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                           </div>
 
                         </div>
@@ -81,22 +81,22 @@
                                 <div class="form-group">
                                     <asp:Label ID="Label1" runat="server" Text="Nombre Completo"></asp:Label>
                                     <br />
-                                    <asp:TextBox ID="txtNombreCompleto" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                    <asp:TextBox ID="txtNombreCompleto" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                                 </div>
 
                               <div class="form-group">
                                     <asp:Label ID="Label8" runat="server" Text="Apellido Materno"></asp:Label>
                                   <br />
-                                    <asp:TextBox ID="txtapellidomaterno" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                    <asp:TextBox ID="txtapellidomaterno" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                               </div>
                               <div class="form-group">
                                    <asp:Label ID="Label9" runat="server" Text="Cantidad Afiliaciones"></asp:Label>
                                   <br />
-                                   <asp:TextBox ID="txtafiliaciones" runat="server" class="form-control" Width="70%"></asp:TextBox>
+                                   <asp:TextBox ID="txtafiliaciones" ReadOnly="True" BackColor="White" runat="server" class="form-control" Width="70%"></asp:TextBox>
                               </div>
 
                             </div>
-                        <section style="padding-top:200px"></section>
+                        <section style="padding-top:270px"></section>
                     </form1>
                 </div>
             </div>
